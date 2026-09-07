@@ -1,0 +1,205 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About - FIRSTS ACADEMY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#c8dbff",
+                        "tertiary-fixed-dim": "#ffba27",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#304f00",
+                        "surface-tint": "#bb152c",
+                        "primary-container": "#db313f",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary": "#b7102a",
+                        "on-primary-fixed": "#410007",
+                        "on-secondary-container": "#456e00",
+                        "secondary": "#426900",
+                        "inverse-on-surface": "#ecf1ff",
+                        "surface-variant": "#d5e3ff",
+                        "on-primary-fixed-variant": "#92001c",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdea9",
+                        "outline-variant": "#e4bebc",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#7a5500",
+                        "secondary-fixed": "#b5f560",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "background": "#f9f9ff",
+                        "tertiary-container": "#996c00",
+                        "inverse-surface": "#183153",
+                        "inverse-primary": "#ffb3b1",
+                        "on-background": "#001b3c",
+                        "outline": "#8f6f6e",
+                        "on-tertiary-fixed": "#271900",
+                        "on-surface-variant": "#5b403f",
+                        "surface-container-high": "#dee8ff",
+                        "secondary-container": "#b3f35e",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-secondary-fixed": "#112000",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-container-highest": "#d5e3ff",
+                        "secondary-fixed-dim": "#9bd847",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#001b3c",
+                        "primary-fixed": "#ffdad8",
+                        "surface-bright": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "gutter": "24px",
+                        "stack-md": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "button-text": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button-text": ["16px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    },
+                    "boxShadow": {
+                        "level-1": "0 4px 12px rgba(29, 53, 87, 0.08)",
+                        "level-2": "0 8px 20px rgba(29, 53, 87, 0.12)",
+                        "inner-press": "inset 0 2px 4px rgba(0, 0, 0, 0.1)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-primary {
+            @apply bg-primary text-on-primary font-button-text text-button-text rounded-lg px-6 py-3 border-b-2 border-on-primary-fixed-variant shadow-level-1 hover:shadow-level-2 active:shadow-inner-press active:border-b-0 active:translate-y-[2px] transition-all;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[80px]">
+<!-- TopNavBar -->
+<header class="bg-surface/95 dark:bg-inverse-surface/95 fixed top-0 w-full h-[80px] z-50 border-b border-outline-variant/10 backdrop-blur-md flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto left-0 right-0">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 object-contain rounded-full shadow-level-1" data-alt="A small, stylized logo icon representing FIRSTS ACADEMY, featuring vibrant colors on a transparent background, suitable for a header." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2btaOy8xWZ0f24gYkFB6VuEWAB5Q8Kfd60K_VYa2TcMGyKcQOfIBMo2sT5fgLGKXoTsd53gIpHIXaTVbqKhtt6XLxet7tOpdEWOViI75PEWK-xBDpnTukPgNRckkgEEUvE2dLQH1VQXwPcJRyY4SnBgFFErygXo-rzNXBBnAfH_-NmZQ_r5-UjIMIOpR8cNGD3ZwPc-yEv7NNr7E1KJxy6XAXLMueCzpWsx5Lv_P7NQqsX04W3l587thn33HflvBe3A">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim uppercase tracking-tighter">FIRSTS ACADEMY</span>
+</div>
+<nav class="hidden md:flex gap-6 items-center"><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Home</a><a class="font-label-bold text-label-bold text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:scale-105 transition-transform duration-200" href="#">About</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Programs</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Services</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Products</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Gallery</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Approvals</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Contact</a></nav>
+<button class="btn-primary hidden md:block">Join Now</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col gap-stack-lg py-stack-lg max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<!-- Header Section -->
+<section class="bg-surface-container rounded-[24px] p-stack-lg shadow-level-1 relative overflow-hidden border border-surface-variant">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-md">Why Elementary Entrepreneurship Education?</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    We humans live by inventions everyday of our lives, and without inventors and builders of brands around the world who continue to produce the phones, computers, mobile applications, home appliances, air conditioners, airplanes, shoes, wristwatches, perfumes plus the jobs that come with these creations, there will be no human civilization. In other words, we live in a world powered by inventions and brain power. To that extent, no subject ought to be more important in any school curriculum, national development plan, pro education CSR anywhere on earth or in any religion than the subject of invention for primary and secondary school children, because at the end of the day, all prosperity, personal or national, exist because an inventor invented value which turned into jobs and goods and exports. So why not deliberately allow Nigeria overflow with a new population of jobs and wealth creators whose brain become ignited in value invention and problem solving early enough.
+                </p>
+</div>
+</section>
+<!-- Vision / Mission (Bento Grid Style) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Vision Card -->
+<div class="bg-surface rounded-2xl p-stack-md border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all group flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="lightbulb" data-weight="fill" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Vision</h2>
+<div class="space-y-4">
+<p class="font-body-md text-body-md text-on-surface-variant font-bold">Africa's first ever Under 17s Value Invention and Enterprise Pioneering Education Platform.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mission: 1 Million Wings, training 1 million Under 17s in how to invent and turn problems into products, until 1 child births 1 brainchild.</p>
+</div>
+</div>
+<!-- Mission Card -->
+<div class="bg-surface rounded-2xl p-stack-md border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-secondary transition-all group flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch" data-weight="fill" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Raise a new generation of value invention and pioneering centric young Nigerians who turn ideas into unicorns and world power brands out of Nigeria, until she emerges into world power status by 2045. <strong class="text-secondary">Expected end: 10,000 unicorns by 2045.</strong>
+</p>
+</div>
+</section>
+<!-- Guarantee Statement -->
+<section class="bg-gradient-to-br from-primary to-primary-container rounded-2xl p-stack-lg text-on-primary shadow-level-2 flex flex-col md:flex-row items-center gap-stack-md">
+<div class="bg-white/20 p-6 rounded-full shrink-0">
+<span class="material-symbols-outlined text-5xl text-on-primary" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-primary">Performance Guarantee Statement</h2>
+<p class="font-body-lg text-body-lg text-on-primary/90 font-medium">
+                    FIRSTS ACADEMY guarantees that any child ignited via this club will go on to invent an original brainchild or we retrain the child free.
+                </p>
+</div>
+</section>
+<!-- Timeline Placeholder -->
+<section class="py-stack-md text-center">
+<div class="inline-flex items-center gap-2 bg-surface-variant text-on-surface-variant px-6 py-3 rounded-full font-label-bold text-label-bold shadow-level-1">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                Founded 2014 - Pioneering the Future
+            </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-on-surface dark:bg-surface-container-lowest mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<img class="w-8 h-8 object-contain rounded-full shadow-level-1 opacity-90" data-alt="A small, stylized logo icon representing FIRSTS ACADEMY, featuring vibrant colors on a transparent background, suitable for a footer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0fjGmsCC-2VVmaEwzFPOV5c1jr-S3_pFVyX0Abrol5TzU0aEWLy-53u2mclZ_khyH1I9ZUVRs5eAQ1sD0GaTWD1RoWQeQegc4au3VPGL_roeuWeQ1H_69-Me6juTWV2ES9ESjWXNE48mZvyvGtfyxpxyyvKBuyh_15CET7xhKotTEEU6qy5VJyS2cd8mWpjdhlLmWSpTxQLwHUgZqtNe-2i8Llet3Jcwno_5qNBg8EdtP0ZRPnaj6QadnT-IL8upSUw">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface dark:text-primary uppercase tracking-tighter">FIRSTS ACADEMY</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Careers</a>
+</nav>
+<div class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-60 text-center md:text-right text-sm">
+                © 2024 FIRSTS ACADEMY.<br class="md:hidden"> Africa's Premier Under 17s Pioneering Education Platform.
+            </div>
+</div>
+</footer>
+
+
+</body></html>

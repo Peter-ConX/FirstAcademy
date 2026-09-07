@@ -1,0 +1,237 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery - FIRSTS ACADEMY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb3b1",
+                        "secondary-fixed": "#b5f560",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad8",
+                        "secondary-fixed-dim": "#9bd847",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-background": "#001b3c",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#b3f35e",
+                        "surface-container-highest": "#d5e3ff",
+                        "on-tertiary-fixed": "#271900",
+                        "on-secondary-fixed-variant": "#304f00",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "inverse-surface": "#183153",
+                        "on-surface-variant": "#5b403f",
+                        "on-secondary-fixed": "#112000",
+                        "surface-container-low": "#f0f3ff",
+                        "on-secondary-container": "#456e00",
+                        "surface-variant": "#d5e3ff",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#c8dbff",
+                        "outline": "#8f6f6e",
+                        "tertiary-fixed": "#ffdea9",
+                        "surface-container-high": "#dee8ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#bb152c",
+                        "surface-bright": "#f9f9ff",
+                        "surface": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#410007",
+                        "tertiary-container": "#996c00",
+                        "primary-container": "#db313f",
+                        "on-primary-fixed-variant": "#92001c",
+                        "tertiary-fixed-dim": "#ffba27",
+                        "outline-variant": "#e4bebc",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#426900",
+                        "primary": "#b7102a",
+                        "surface-container": "#e7eeff",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9ff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "tertiary": "#7a5500",
+                        "on-surface": "#001b3c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "stack-md": "24px",
+                        "stack-sm": "12px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "button-text": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "button-text": ["16px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 24px; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pt-[80px] font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface/95 dark:bg-inverse-surface/95 fixed top-0 w-full h-[80px] z-50 border-b border-outline-variant/10 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="FIRSTS ACADEMY Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSmSBT_2myNcvHWc12MShiTSfaGBovAuD9_r43fvWJsfPVdDru5d7nUUOndlPeWydW69G4pV2KNAkKe2OaYNUKXq7KN5vGDZxU_xcIyiJmGZG1d3EYD8PiI8oJwryeJd4YMEEvpHrfJtP5R95qE3KkLxxYgAmSIyjIq1nuBdfsWub4uztN8qn64Voi5wqfu_u72O-1AzVo5yOSQ38R_-DauCRWCH3AxYsfRgcIKPt_X4CS2hsVdovU1Vpxf_CM3zRTQ">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim uppercase tracking-tighter hidden sm:block">FIRSTS ACADEMY</span>
+</div>
+<nav class="hidden md:flex gap-6 items-center"><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Home</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">About</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Programs</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Services</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Products</a><a class="font-label-bold text-label-bold text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:scale-105 transition-transform duration-200 scale-95 transition-all duration-150" href="#">Gallery</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Approvals</a><a class="font-label-bold text-label-bold text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:scale-105 transition-transform duration-200" href="#">Contact</a></nav>
+<button class="bg-primary text-on-primary font-button-text text-button-text px-6 py-2 rounded-lg border-b-[2px] border-on-primary-fixed shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:-translate-y-0.5 active:translate-y-0 active:border-b-0 active:shadow-inner transition-all hidden md:block">
+                Join Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Header Section -->
+<section class="text-center mb-stack-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-unit">Gallery</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Celebrating the journey of our young inventors and pioneers.</p>
+</section>
+<!-- Gallery Grid -->
+<section class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-64 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="A bright, energetic classroom setting filled with diverse teenagers working on robotics and coding projects. The scene uses modern, optimistic lighting with high contrast and vibrant accents of red and green, reflecting a playful, high-end educational environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0cTVGAPQRpvC05qpyXVmoNralTZi_q3FGz1iaRcGPKGT-JfvYb9meU4fg0koVbwSBT6riAwL0ZxQVNLNXdB7vR6gs6YQowYsTGYpLU6ywh8g4jsthvXseFj3s5b4iTQTmxM52_AzYZp2Cm19gyCMWb-ekbL-9Kb7RnwoHs_zne8JTpGoki_DBOqw0Rn4elCuM2v37WKq2lANW-3HZhSLxwH1d8_h6oEFCWEkIwuhhIZp8EivDUpRi">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Innovation</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">JJC Classroom Innovation</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-96 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="Dynamic outdoor shot of young students engaged in a high-energy racing competition with custom-built vehicles. Bright daylight, vivid red and green track markings, capturing a moment of triumph and teamwork in a modern, optimistic educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtixK85c10FXXg_GephuE2NR58q-GqPNtT51S5_8BQDbBd3LnUxh9t5zSDC9gZu4JbiRlDTrjwjeYR6JnBjVA85RviXm3cyhFs-UBBFn_OaQ7NWX2H2udn3pqw667UO8UF2yh6UUoFwtzJu0frnsgHjNjf0RKzfHj-s9LPmU28Xle2TvR6iIs-FPJAN8YVMZGigG-jAcnx1bUlIRYSMmn3DmtzD8KQxw1mzAK4gD73_XOp0ilr5FIs">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold rounded-full mb-2">Competition</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">National Racing Championship Highlights</h3>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-48 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="A weekend workshop scene showing young inventors intensely focused on building prototypes. Clean, modern workspace with tactile materials, brightly lit, featuring touches of red and green. The mood is curious, energetic, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJh_0IK6eFs2Cnz721tZDYLCGG3S6y4aSwWHQPqGlBkTEhb2S4xbORZYfSrpn9z41qNjmOgrjERgRDAbt9e-T50qMkvzVOvG-ZJ0st_pMl-lTwv_4UjTLhazJwHPGCJZ45XIypYp0wNETzFFYhZHM8swww3ZBLKo8d6n1MUInKcoLT5WbjXlxhJB5lVCOFxDCUBUDfv3CWcfFwUTkp3EpQEF1MBAyeOUmw5Ua8q1sjflk2SO8KA9By">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Workshop</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">Kingstarter Weekend Ignition Slams</h3>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-80 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a young student proudly holding a complex engineering project. The lighting is soft and flattering, emphasizing growth and achievement. The background is a blurred modern lab with vibrant red accents, conveying trust and premium education." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAougT5hJ1rkAmQeZdjXSHExpz43PEd8lmff_0wFg3C9lIftjfdHJRpxL-hy7W41Ac593w8xYDjWURn9gWE-PqHK93Kdd0fbJM8YP23HM0hUFfhe6b224qlNTkS8qm-3S1MagdZgHh8j_Oh2Fz63rIW5jXhglVu9DbjWnfqfrT80hNSd1gXTzab8t8oPDX2NZBcHO4QPaU2xlJllTlZnyTZtLmeZvCBYzKnGPnG7iOAhaAuu9YQtcmb">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold rounded-full mb-2">Projects</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">Student Project Showcase</h3>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-72 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="A group of teenagers participating in a community outreach event, demonstrating science experiments to younger children. Warm, optimistic lighting, set in a sunny community center. Vibrant red and green branding elements are subtly visible, creating a joyful atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkk-h1BHUcaTcU3_cSA13oHl9P8EIl_J5mWAC8O2WDJea1PBjU8j12TUjjJKnCeH_HQiQoUaMJho6hplAbungENxZ159n5kSjSEs8BPSfDvgKXRNBlv9rw2-iZMx0rrzBBAO3JkHeKwdM61Y18ZbjnWNUshKNuNipxnrgS_B58HzhGV6KjfY0No2Li7TbpLFGUS7S80a_O25pxikEg0JyvOShrG7c84ccy9lH7Z4waQHqjc-8k_0LA">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold rounded-full mb-2">Community</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">Community Outreach Events</h3>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-56 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="An engaging workshop setup for young learners focusing on aviation and aerodynamics. Bright, airy room with modern geometry. Kids are holding model planes. The aesthetic is clean, high-contrast, with playful red and green visual anchors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-yiBt1iS-wRgmbkqovaABAWcZEv5fXMxYZ7UrD1LfXv8H2XNkD2_iFm6Ai9BC5KXsGh79OX47T19C73ny973pPM33MckbuOLPEJYBq6Q9wekLwXhbFncmKvnw55GmUbvO_euJ6tVtnY0Entw8OtRfMh2_O299gbqOPwPbi8Qg2mFEy0ZYd1a_dXzjofNtA94xJyomVvzxEYZ_kaU1R3yd4i-l9bEAvQPUQwQ8J-PHqv6_6uHt6z4">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Workshop</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">Junior Eagles WingsStarter Workshop</h3>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-64 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="A collaborative moment showing two young students problem-solving around a laptop. Clean, white desk environment with tactile educational tools. High-key lighting highlights their focus and curiosity, reflecting a premium, modern learning experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJOXvYz1LM4TC001SAQcDwqaqTzjFAlGuxd3SMSRowWGHzNF5D7nWI6UP7H-WKvjQnNHSDFJ7pYKTj8BHcd_qBfSYVO_wM-zLw9iyOI-Oi83bsZ8qCn7us1X3cClHGjn9Js4ehr7BJ9U96Aq1LWRbpcz4WqMuDjI45TlyUWGmuoEWFD3c5nFsT21MheaFFSN2bN7OVOOKTtbn0i3gWZIwF5PZZfVnCFZIKZh5XeHEDBJY6vird7lE">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold rounded-full mb-2">Learning</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">JJC Classroom Innovation</h3>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-[0_4px_12px_rgba(29,53,87,0.08)] hover:shadow-[0_8px_20px_rgba(29,53,87,0.15)] hover:border-primary transition-all duration-300">
+<div class="h-80 bg-surface-container w-full relative">
+<img class="w-full h-full object-cover" data-alt="A wide shot of a tech showcase event in a large, modern hall. Students stand by their interactive exhibits while parents observe. The lighting is sophisticated and bright, with red and green banners creating a cohesive, professional brand atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmYygSiEbI35Awiyq5irTMmZsjG6bgT-zP0IxVLd5bUIa-b-U-4GWjU-Aw8cRXWn0qbqN6sA_QR3S6CgQ95r-DViCSlHTQDqBIYqDZoOwYx5V1-gkdt6qIWE27LJf8EA3jxQvxtTejW5TgZ4pfRHr9HVs2uCGP3Ayv1Yp_l0lyn-ONjlSIB86OPm5isk-LuyloWbXgXUZanf_-biZOLEVYtyYLI8Ae65T5gJ3yf3XwcZIDINqk9aH">
+</div>
+<div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Exhibition</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest">Student Project Showcase</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-stack-lg flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md mt-stack-lg">
+<div class="flex items-center gap-4">
+<img alt="FIRSTS ACADEMY Logo" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVsEmm5oA1-QkmmEsl3a1kIVxv0j-uTejJOald7ZRUnUOZOqRucPAo-bywoSJ05FVUIVeRmWJV5BfdHTELJV8tmKi1M-OROdwtJLENCGSUDfWg1gS2i4AVdyqDQ6TwdYzfPLcZWbDxMuCHDTwhfihuDmJh-HZzCfpUEGzvGITPDLpaUx7n7TECvNynyHJ9FzyPFMAr_fuxQr4EYNm6k3YBSVbpVKPNd5lLVmL33yH2-zoJUHDkInVG9soUpR8mQs20g">
+<span class="font-display-lg-mobile text-display-lg-mobile text-surface dark:text-primary uppercase tracking-tighter">FIRSTS ACADEMY</span>
+</div>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Careers</a>
+</div>
+<div class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 text-center md:text-right text-sm">
+            © 2024 FIRSTS ACADEMY. Africa's Premier Under 17s Pioneering Education Platform.
+        </div>
+</footer>
+
+
+</body></html>

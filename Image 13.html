@@ -1,0 +1,278 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Our Services - FIRSTS ACADEMY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d5e3ff",
+                        "inverse-surface": "#183153",
+                        "surface-tint": "#bb152c",
+                        "surface-variant": "#d5e3ff",
+                        "secondary-fixed-dim": "#9bd847",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "on-surface": "#001b3c",
+                        "on-secondary-container": "#456e00",
+                        "on-error": "#ffffff",
+                        "outline": "#8f6f6e",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffba27",
+                        "inverse-primary": "#ffb3b1",
+                        "secondary": "#426900",
+                        "primary-fixed": "#ffdad8",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "background": "#f9f9ff",
+                        "primary": "#b7102a",
+                        "tertiary": "#7a5500",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#5b403f",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary-fixed": "#b5f560",
+                        "on-background": "#001b3c",
+                        "tertiary-container": "#996c00",
+                        "outline-variant": "#e4bebc",
+                        "tertiary-fixed": "#ffdea9",
+                        "on-primary-fixed": "#410007",
+                        "on-secondary-fixed": "#112000",
+                        "surface-dim": "#c8dbff",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#271900",
+                        "on-secondary-fixed-variant": "#304f00",
+                        "secondary-container": "#b3f35e",
+                        "surface-container": "#e7eeff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "surface-container-high": "#dee8ff",
+                        "primary-container": "#db313f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "12px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "button-text": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "button-text": ["16px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    },
+                    "boxShadow": {
+                        "level-1": "0 4px 12px rgba(29, 53, 87, 0.08)",
+                        "level-2": "0 8px 20px rgba(29, 53, 87, 0.12)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .inner-press:active {
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            @apply bg-primary text-on-primary font-button-text text-button-text rounded-lg px-6 py-3 border-b-2 border-on-primary-fixed-variant transition-all duration-150 hover:bg-primary-container inner-press inline-flex items-center justify-center;
+        }
+        .btn-secondary {
+            @apply border-2 border-secondary text-secondary font-button-text text-button-text rounded-lg px-6 py-3 transition-all duration-150 hover:bg-surface-container inner-press inline-flex items-center justify-center;
+        }
+        .glass-card {
+            @apply bg-surface/80 backdrop-blur-sm border border-outline-variant/30 shadow-level-1 rounded-[16px] transition-all duration-300 hover:shadow-level-2 hover:-translate-y-1 hover:border-primary/50;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[80px]">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full h-[80px] z-50 bg-surface/95 dark:bg-inverse-surface/95 border-b border-outline-variant/10 backdrop-blur-md transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-full">
+<!-- Logo -->
+<a class="flex items-center gap-2 group hover:scale-105 transition-transform duration-200" href="#">
+<img class="h-[50px] w-auto object-contain" data-alt="FIRSTS ACADEMY Logo featuring an eagle, crown, lightbulb composed of gears, and wings in a vibrant red, green, and gold palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinSTpLmJC0h_3dwW9yaR7-ICp2V115qJEvd6XtAVjIKl9pvg3QPYpKDTVMHEc3cgCzcy39txTWG_ubuXIKXrIIJF5TDJvdE-NlKB4FfJo8vpTHyIXvswig-LbI7LsrEDc-_Q9eAPrWsM7bAqL5m9YXwXBSY8PXmXhtfSqh9T01SUhZdi8VowzmL0dESH9XzabLVtBJpphDdGY7cfLAvIbnsgJgEtYHluyjEzBV0IrfPpT5kyGPgNBnwB_QM_RD3Z9tQ">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tighter hidden lg:block">FIRSTS ACADEMY</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-6"><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Home</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">About</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Programs</a><a class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1 active:scale-95 transition-all duration-150" href="#">Services</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Products</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Gallery</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Approvals</a><a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200" href="#">Contact</a></div>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="btn-primary hover:scale-105 transition-transform duration-200 hidden sm:inline-flex" href="#">Join Now</a>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Toggle Menu" class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="relative pt-stack-lg pb-stack-lg overflow-hidden bg-surface-container-low">
+<!-- Abstract Shapes for high-energy background -->
+<div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+<div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<span class="inline-block py-1 px-3 rounded-full bg-surface-tint/10 text-primary font-label-bold text-label-bold mb-4 border border-primary/20">What We Offer</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Our Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Empowering the next generation through tailored educational programs, strategic partnerships, and innovative tools designed for growth and achievement.</p>
+</div>
+</header>
+<!-- Services Grid Section -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Service Card 1: School Partnerships -->
+<div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+<div class="w-16 h-16 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">School Partnerships</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">
+                        We collaborate closely with visionary schools to integrate the Firsts Academy curriculum. Our partnership model enhances existing educational frameworks with modern, practical leadership and innovation modules.
+                    </p>
+<div class="relative z-10 mt-auto">
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link" href="#">
+                            Explore Partnerships
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2: WingsStarter Product -->
+<div class="glass-card p-8 flex flex-col group relative overflow-hidden border-t-4 border-t-primary">
+<div class="absolute inset-0 bg-gradient-to-br from-surface to-primary/5 opacity-50"></div>
+<div class="flex justify-between items-start mb-6 relative z-10">
+<div class="w-16 h-16 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<!-- Logo Placeholder for WingsStarter -->
+<div class="w-24 h-12 bg-surface-container rounded-lg border border-outline-variant/30 flex items-center justify-center text-xs text-on-surface-variant font-label-bold">
+                            WingsStarter Logo
+                        </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 relative z-10">WingsStarter Product</h3>
+<span class="inline-block py-1 px-3 rounded-full bg-tertiary-container/30 text-tertiary font-label-bold text-[12px] mb-4 w-max relative z-10">Imagination Power (IP) Ignition Aid</span>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">
+                        A proprietary toolkit designed to spark creativity. <strong class="text-on-surface font-bold">Bonus:</strong> When a school purchases WingsStarter, they receive the Junior Eagles Club as an exclusive add-on benefit for their students.
+                    </p>
+<div class="relative z-10 mt-auto">
+<a class="btn-primary w-full sm:w-auto" href="#">Get WingsStarter</a>
+</div>
+</div>
+<!-- Service Card 3: Church Youth Programs -->
+<div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+<div class="absolute bottom-0 right-0 w-40 h-40 bg-surface-container-highest rounded-tl-full -mr-10 -mb-10 transition-transform group-hover:scale-110"></div>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest text-inverse-surface flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-inverse-surface group-hover:text-surface transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">Church Youth Programs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">
+                        Tailored developmental programs specifically designed for faith-based communities. Our Junior Kings track aligns foundational values with modern leadership skills for holistic growth.
+                    </p>
+<div class="relative z-10 mt-auto">
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link" href="#">
+                            View Junior Kings Track
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4: Corporate & Leisure Programs -->
+<div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+<div class="absolute top-1/2 left-0 w-24 h-24 bg-tertiary-fixed/30 rounded-full -ml-12 -mt-12 transition-transform group-hover:scale-150"></div>
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">Corporate &amp; Leisure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">
+                        Engaging workshops and retreats designed for corporate teams and leisure groups. We bring the Firsts Academy methodology to adults, fostering innovation, teamwork, and continuous learning.
+                    </p>
+<div class="relative z-10 mt-auto">
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link" href="#">
+                            Book a Workshop
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-stack-lg bg-on-surface dark:bg-surface-container-lowest mt-stack-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md border-b border-surface/10 pb-8 mb-8">
+<!-- Brand Anchor -->
+<div class="flex items-center gap-3">
+<img class="h-[60px] w-auto object-contain bg-surface rounded-lg p-1" data-alt="FIRSTS ACADEMY Logo featuring an eagle, crown, lightbulb composed of gears, and wings in a vibrant red, green, and gold palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7fBMJREV2jcWH0QsNTs3VdYrz55BN-pwwFMG4x3p_vx8KYoZcOyOSIYbVOug5AjtHG_ANb5k6XTl1O1tabjZLCqIKYO0fA0xZA2JjcMSWdSp84SHL6hp1zmZiwKCaGVMSgCO1uqrbtjMaRqhJ5P7WSB0MmUCICBKLpwh5SCo_tvZA6Fdk0jwnthd0yOYaVMS6L0Rvixc2732eGxtT9Fz7GleXzoNffoEMaXNzIuT4DNHyXN_CEvilLD5ZXOoV2YXtkQ">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface dark:text-primary uppercase tracking-tighter hidden lg:block">FIRSTS ACADEMY</span>
+</div>
+<!-- Address Slot -->
+<div class="text-center md:text-right flex items-center gap-2 text-surface-variant opacity-80">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+<span class="font-body-md text-body-md">Lagos, Nigeria</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<p class="font-body-md text-body-md text-surface dark:text-on-surface text-center md:text-left">
+                    © 2024 FIRSTS ACADEMY. Africa's Premier Under 17s Pioneering Education Platform.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors underline-offset-4 hover:underline" href="#">Careers</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive script for navbar scroll effect -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('main-nav');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    nav.classList.add('shadow-level-1');
+                    nav.classList.replace('border-outline-variant/10', 'border-[#E1E4E8]');
+                } else {
+                    nav.classList.remove('shadow-level-1');
+                    nav.classList.replace('border-[#E1E4E8]', 'border-outline-variant/10');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

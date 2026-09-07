@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRSTS ACADEMY - Africa's Premier Under 17s Pioneering Education Platform</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#f9f9ff",
+            "surface": "#f9f9ff",
+            "background": "#f9f9ff",
+            "on-background": "#001b3c",
+            "on-surface": "#001b3c",
+            "on-surface-variant": "#5b403f",
+            "primary": "#b7102a",
+            "primary-container": "#db313f",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#fffbff",
+            "on-primary-fixed": "#410007",
+            "on-primary-fixed-variant": "#92001c",
+            "primary-fixed": "#ffdad8",
+            "primary-fixed-dim": "#ffb3b1",
+            "inverse-primary": "#ffb3b1",
+            "secondary": "#426900",
+            "secondary-container": "#b3f35e",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#456e00",
+            "secondary-fixed": "#b5f560",
+            "secondary-fixed-dim": "#9bd847",
+            "on-secondary-fixed": "#112000",
+            "on-secondary-fixed-variant": "#304f00",
+            "tertiary": "#7a5500",
+            "tertiary-container": "#996c00",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#fffbff",
+            "tertiary-fixed": "#ffdea9",
+            "tertiary-fixed-dim": "#ffba27",
+            "on-tertiary-fixed": "#271900",
+            "on-tertiary-fixed-variant": "#5e4100",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container": "#e7eeff",
+            "surface-container-high": "#dee8ff",
+            "surface-container-highest": "#d5e3ff",
+            "surface-dim": "#c8dbff",
+            "surface-tint": "#bb152c",
+            "surface-variant": "#d5e3ff",
+            "on-secondary-fixed": "#112000",
+            "outline": "#8f6f6e",
+            "outline-variant": "#e4bebc",
+            "inverse-surface": "#183153",
+            "inverse-on-surface": "#ecf1ff",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+          },
+          spacing: {
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "margin-desktop": "64px",
+            "stack-sm": "12px",
+            "stack-md": "24px",
+            "stack-lg": "48px",
+            "unit": "8px",
+          },
+          fontFamily: {
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-bold": ["Plus Jakarta Sans"],
+            "button-text": ["Plus Jakarta Sans"],
+            "body-lg": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"],
+          },
+          fontSize: {
+            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+            "label-bold": ["14px", { lineHeight: "20px", fontWeight: "700" }],
+            "button-text": ["16px", { lineHeight: "24px", fontWeight: "700" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+          },
+          boxShadow: {
+            "level-1": "0 4px 12px rgba(29,53,87,0.08)",
+            "level-2": "0 8px 20px rgba(29,53,87,0.15)",
+            "inner-press": "inset 0 2px 4px rgba(0,0,0,0.1)",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .fill-icon { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .shadow-level-1 { box-shadow: 0 4px 12px rgba(29,53,87,0.08); }
+    .shadow-level-2 { box-shadow: 0 8px 20px rgba(29,53,87,0.15); }
+    .btn-press:active { box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); transform: translateY(2px); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(29,53,87,0.15); border-color: #b7102a; }
+    .glass-card { background: rgba(249,249,255,0.8); backdrop-filter: blur(4px); border: 1px solid rgba(228,190,188,0.3); border-radius: 16px; box-shadow: 0 4px 12px rgba(29,53,87,0.08); transition: all 0.3s ease; }
+    .glass-card:hover { box-shadow: 0 8px 20px rgba(29,53,87,0.15); transform: translateY(-4px); border-color: rgba(183,16,42,0.5); }
+    .blob-shape { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    .masonry-grid { column-count: 1; column-gap: 24px; }
+    @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+    @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+    .masonry-item { break-inside: avoid; margin-bottom: 24px; }
+    @keyframes bounce-slow { 0%, 100% { transform: translateY(0) rotate(12deg); } 50% { transform: translateY(-15px) rotate(15deg); } }
+    @keyframes bounce-slow-reverse { 0%, 100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(15px) rotate(-15deg); } }
+    .bounce-slow { animation: bounce-slow 4s infinite ease-in-out; }
+    .bounce-slow-reverse { animation: bounce-slow-reverse 5s infinite ease-in-out; }
+    /* page sections */
+    .page-section { display: none; }
+    .page-section.active { display: block; }
+    /* modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box { background: white; border-radius: 20px; padding: 2rem; max-width: 520px; width: 100%; position: relative; max-height: 90vh; overflow-y: auto; transform: translateY(20px); transition: transform 0.25s; }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+    /* wa button */
+    .wa-floating { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 150; }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+
+<!-- ═══════════════════════════════════════
+     STICKY NAVBAR
+════════════════════════════════════════ -->
+<header class="fixed top-0 w-full h-[80px] z-50 bg-surface/95 border-b border-outline-variant/10 backdrop-blur-md" id="nav-header">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-full">
+    <!-- Logo -->
+    <a class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="nav('home')">
+      <img alt="FIRSTS ACADEMY Logo" class="h-12 w-auto object-contain"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5meWNCUqCa053OLFxU67_Vh7ifrTCBgrYBRtmYD13C4OcuR-bv8OcB5Qe5wrRWeXP6zFdM2U6tOy2_yabs773VQk20lEtwQUNgcQxGj7i60cceQEseBgB2mPa1IzGaucvPrs063BqujWo-_WF_yAC8Q_fSyGM8ROOTm6Zdr8JUt2wisBnLsqqNu-yLts56OwoDEQE2J12mwGd4TEQrV3UMaGPy1zo9xGE70RUGJI2pkChMFgheJ4b7pSabvJ68FjyIQ">
+      <span class="font-headline-md text-headline-md text-primary uppercase tracking-tighter hidden md:block">FIRSTS ACADEMY</span>
+    </a>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-6 items-center" id="navLinks">
+      <a id="nav-home" class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1 hover:scale-105 transition-all duration-200 cursor-pointer" onclick="nav('home')">Home</a>
+      <a id="nav-about" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('about')">About</a>
+      <a id="nav-programs" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('programs')">Programs</a>
+      <a id="nav-services" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('services')">Services</a>
+      <a id="nav-products" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('products')">Products</a>
+      <a id="nav-gallery" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('gallery')">Gallery</a>
+      <a id="nav-approvals" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('approvals')">Approvals</a>
+      <a id="nav-contact" class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors hover:scale-105 duration-200 cursor-pointer" onclick="nav('contact')">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button onclick="openCart()" class="relative p-2 text-on-surface hover:text-primary transition-colors cursor-pointer" aria-label="Shopping Cart">
+        <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+        <span id="cartBadge" class="hidden absolute -top-1 -right-1 bg-primary text-white text-[11px] font-bold min-w-[20px] h-[20px] px-1 rounded-full flex items-center justify-center shadow-sm">0</span>
+      </button>
+      <button onclick="openModal('enrollModal')" class="bg-primary text-on-primary font-button-text text-button-text px-6 py-2 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-150 border-b-2 border-on-primary-fixed-variant hidden md:block">Join Now</button>
+      <button class="md:hidden text-primary p-1" onclick="toggleMobile()">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-surface border-b border-outline-variant/20 px-margin-mobile py-4 flex flex-col gap-3">
+    <a class="font-label-bold text-label-bold text-primary cursor-pointer" onclick="nav('home');toggleMobile()">Home</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('about');toggleMobile()">About</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('programs');toggleMobile()">Programs</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('services');toggleMobile()">Services</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('products');toggleMobile()">Products</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('gallery');toggleMobile()">Gallery</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('approvals');toggleMobile()">Approvals</a>
+    <a class="font-label-bold text-label-bold text-on-surface cursor-pointer" onclick="nav('contact');toggleMobile()">Contact</a>
+    <button onclick="openModal('enrollModal');toggleMobile()" class="bg-primary text-on-primary font-button-text text-button-text px-6 py-2 rounded-lg w-fit">Join Now</button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════ -->
+<div class="page-section active pt-[80px]" id="page-home">
+  <!-- HERO -->
+  <section class="relative overflow-hidden min-h-[90vh] flex items-center bg-surface-bright py-stack-lg">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image:radial-gradient(#9bd847 2px,transparent 2px);background-size:24px 24px;"></div>
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
+      <!-- Left -->
+      <div class="flex flex-col gap-stack-sm z-20">
+        <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-label-bold text-label-bold w-fit shadow-level-1">
+          <span class="material-symbols-outlined fill-icon text-sm">stars</span>
+          Pioneering Education
+        </div>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+          World Power Nigeria 2045 Starts Here
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-4">
+          Powered by 10 Million Under 17 Value Inventors &amp; Pioneers Ignition &amp; Wings (aka 10,000 Unicorns, 10 Years)
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <button onclick="openModal('enrollModal')" class="bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text py-3 px-8 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-150 border-b-2 border-on-primary-fixed-variant flex items-center gap-2">
+            Register Your Child <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+          <button class="bg-surface border-2 border-secondary hover:bg-secondary-container text-on-surface font-button-text text-button-text py-3 px-8 rounded-lg shadow-level-1 hover:shadow-level-2 transition-all duration-150 flex items-center gap-2">
+            <span class="material-symbols-outlined fill-icon">play_circle</span> Watch Video
+          </button>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="relative flex justify-center items-center h-full min-h-[400px]">
+        <div class="absolute inset-0 bg-surface-container rounded-3xl blob-shape shadow-level-1 transform -rotate-6 scale-105 transition-transform duration-700 hover:rotate-0"></div>
+        <div class="absolute inset-0 bg-secondary-fixed opacity-20 rounded-3xl blob-shape transform rotate-12 scale-100 mix-blend-multiply"></div>
+        <div class="absolute top-10 -left-10 bg-tertiary-fixed text-on-tertiary-fixed p-3 rounded-xl shadow-level-2 transform rotate-12 bounce-slow">
+          <span class="material-symbols-outlined fill-icon text-4xl">lightbulb</span>
+        </div>
+        <div class="absolute bottom-10 -right-5 bg-primary text-on-primary p-3 rounded-full shadow-level-2 transform -rotate-12 bounce-slow-reverse">
+          <span class="material-symbols-outlined fill-icon text-3xl">rocket_launch</span>
+        </div>
+        <div class="relative z-10 w-4/5 aspect-square bg-white rounded-2xl shadow-level-2 border border-outline-variant/30 overflow-hidden group">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAag-yRO_WbtNSpLt8MVietvgISw4Sh-XfJYo_jk1EjgolBx0-WyIwraAVGA5mLPrstq0t2n93c_dX64zzoc6pQILY-GFTbplkKQsZshLV8f02OUsEuxHolZsaKGg7LjukfWnOuLSP0uiP3TcvGXFMeiTiOZFxSZe9xjwg0-rFQoraeIaNVeLEIt2Xks5CQgZinzC38Lm3CxOY3Fx2_SmXgWhx9KNjm40BwU_MVoJBC_JAVd501iE9h"
+            alt="Students learning">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white font-label-bold text-label-bold">Building the future, today.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY GUARANTEE -->
+  <section class="py-stack-lg bg-surface-bright relative z-20">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-stack-lg">
+        <h2 class="font-headline-lg text-headline-lg text-on-background inline-block relative">
+          The Academy Guarantee
+          <span class="absolute -bottom-2 left-0 w-full h-1 bg-secondary-fixed rounded-full"></span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+        <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 group hover:-translate-y-2 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl text-primary group-hover:text-on-primary transition-colors duration-300">psychology</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-background mb-2">Stage 1: IC</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Invention Consciousness Ignition: Developing early awareness of human problems as opportunities for novel invention.</p>
+        </div>
+        <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 group hover:-translate-y-2 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 group-hover:bg-secondary-container transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl text-secondary group-hover:text-on-secondary-container transition-colors duration-300">build</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-background mb-2">Stage 2: I Know-How</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Invention Know-How, aka Problem to Product Know-How Ignition: Hands-on prototyping, design thinking, and material fabrication.</p>
+        </div>
+        <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 group hover:-translate-y-2 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 group-hover:bg-tertiary-container transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl text-tertiary group-hover:text-on-tertiary-container transition-colors duration-300">rocket</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-background mb-2">Stage 3: I Pioneer</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Invention Enterprise Pioneering: Commercialization, brand launching, IP co-ownership, and micro-revenue generation.</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <p class="font-headline-md text-headline-md text-primary font-bold mb-4">Mission: 10 Million Wings, 10 Years Nigeria</p>
+        <button onclick="nav('programs')" class="bg-primary text-on-primary font-button-text text-button-text px-8 py-3 rounded-lg border-b-2 border-on-primary-fixed-variant shadow-level-1 hover:shadow-level-2 btn-press transition-all">Explore Programs</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="py-stack-lg">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 card-hover cursor-pointer" onclick="nav('about')">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined fill-icon text-3xl text-primary">school</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Why Elementary?</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">Why early invention education must take precedence in national curricula and family planning.</p>
+        <span class="font-label-bold text-label-bold text-primary flex items-center gap-1">Read Philosophy <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+      </div>
+      <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 card-hover cursor-pointer" onclick="nav('products')">
+        <div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined fill-icon text-3xl text-secondary">shopping_bag</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Official Kits &amp; Gear</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">Equip your child with Kingstarter Games, JJC Jackets, and WingsStarter Playbooks.</p>
+        <span class="font-label-bold text-label-bold text-secondary flex items-center gap-1">Browse Academy Shop <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+      </div>
+      <div class="bg-white rounded-[16px] p-6 border border-outline-variant/30 shadow-level-1 card-hover cursor-pointer" onclick="nav('approvals')">
+        <div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined fill-icon text-3xl text-tertiary">verified</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Accreditations</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">Trusted by Lagos State Government, Universal Basic Education Board, and FCMB.</p>
+        <span class="font-label-bold text-label-bold text-tertiary flex items-center gap-1">View Approvals &amp; Reviews <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-about">
+  <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-stack-lg">
+    <!-- Header -->
+    <section class="bg-surface-container rounded-[24px] p-stack-lg shadow-level-1 relative overflow-hidden border border-surface-variant">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-md">Why Elementary Entrepreneurship Education?</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          We humans live by inventions everyday of our lives, and without inventors and builders of brands around the world who continue to produce the phones, computers, mobile applications, home appliances, air conditioners, airplanes, shoes, wristwatches, perfumes plus the jobs that come with these creations, there will be no human civilization. In other words, we live in a world powered by inventions and brain power. To that extent, no subject ought to be more important in any school curriculum, national development plan, pro education CSR anywhere on earth or in any religion than the subject of invention for primary and secondary school children, because at the end of the day, all prosperity, personal or national, exist because an inventor invented value which turned into jobs and goods and exports. So why not deliberately allow Nigeria overflow with a new population of jobs and wealth creators whose brain become ignited in value invention and problem solving early enough.
+        </p>
+      </div>
+    </section>
+    <!-- Vision & Mission -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <div class="bg-surface rounded-2xl p-stack-md border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all group flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined fill-icon text-3xl">lightbulb</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Our Vision</h2>
+        <div class="space-y-4">
+          <p class="font-body-md text-body-md text-on-surface-variant font-bold">Africa's first ever Under 17s Value Invention and Enterprise Pioneering Education Platform.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant">Mission: 1 Million Wings, training 1 million Under 17s in how to invent and turn problems into products, until 1 child births 1 brainchild.</p>
+        </div>
+      </div>
+      <div class="bg-surface rounded-2xl p-stack-md border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-secondary transition-all group flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined fill-icon text-3xl">rocket_launch</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Our Mission</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Raise a new generation of value invention and pioneering centric young Nigerians who turn ideas into unicorns and world power brands out of Nigeria, until she emerges into world power status by 2045. <strong class="text-secondary">Expected end: 10,000 unicorns by 2045.</strong>
+        </p>
+      </div>
+    </section>
+    <!-- Guarantee Banner -->
+    <section class="bg-gradient-to-br from-primary to-primary-container rounded-2xl p-stack-lg text-on-primary shadow-level-2 flex flex-col md:flex-row items-center gap-stack-md">
+      <div class="bg-white/20 p-6 rounded-full shrink-0">
+        <span class="material-symbols-outlined fill-icon text-5xl text-on-primary">verified</span>
+      </div>
+      <div>
+        <h2 class="font-headline-lg text-headline-lg mb-4 text-on-primary">Performance Guarantee Statement</h2>
+        <p class="font-body-lg text-body-lg text-on-primary/90 font-medium mb-4">
+          FIRSTS ACADEMY guarantees that any child ignited via this club will go on to invent an original brainchild or we retrain the child free.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="openModal('enrollModal')" class="bg-white text-primary font-button-text text-button-text px-6 py-3 rounded-lg border-b-2 border-primary-fixed-dim btn-press transition-all">Enroll Your Child Under Guarantee</button>
+          <button onclick="nav('programs')" class="border-2 border-white text-on-primary font-button-text text-button-text px-6 py-3 rounded-lg hover:bg-white/10 transition-all">Learn More About Programs</button>
+        </div>
+      </div>
+    </section>
+    <!-- Founded -->
+    <section class="py-stack-md text-center">
+      <div class="inline-flex items-center gap-2 bg-surface-variant text-on-surface-variant px-6 py-3 rounded-full font-label-bold text-label-bold shadow-level-1">
+        <span class="material-symbols-outlined">history</span>
+        Founded 2014 - Pioneering the Future
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PROGRAMS PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-programs">
+  <header class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto text-center mt-8">
+    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Our Programs</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">FIRSTS ACADEMY runs distinct programs tailored to different environments.</p>
+  </header>
+  <main class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto pb-stack-lg">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+      <!-- JJC Nigeria -->
+      <article class="lg:col-span-12 bg-white rounded-[16px] border border-surface-container-high shadow-level-1 card-hover transition-all duration-300 p-8 flex flex-col gap-8 relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <!-- Left Column: Official Logo & Identity -->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center bg-[#0d1b2e] rounded-2xl p-6 border border-surface-container-low text-center shadow-md">
+            <img class="w-48 h-auto object-contain mb-4 transform hover:scale-105 transition-transform drop-shadow-lg"
+              src="./jjc-nigeria-logo.png"
+              alt="JJC Nigeria Logo">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-1">JJC Nigeria</h2>
+            <p class="text-xs font-label-bold text-secondary uppercase tracking-wider mb-2">Junior Job Creators</p>
+            <div class="flex flex-wrap gap-2 justify-center mb-2">
+              <span class="bg-secondary-container/20 text-secondary-fixed border border-secondary-fixed/40 px-3 py-1 rounded-full font-label-bold text-xs">Public Schools Nationwide</span>
+              <span class="bg-surface-variant/20 text-[#d5e3ff] border border-[#d5e3ff]/30 px-3 py-1 rounded-full font-label-bold text-xs">Lagos SUBEB Partnered</span>
+            </div>
+            <p class="text-xs text-white/80 font-medium mt-2 px-3 py-1 bg-white/10 rounded-lg border border-white/15">Targeting 100,000 Pupils in Primary 4-6</p>
+          </div>
+
+          <!-- Right Column: Description, Program Scope & Actions -->
+          <div class="w-full lg:w-2/3 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-xs mb-3 border border-secondary/30">
+                <span class="material-symbols-outlined fill-icon text-secondary text-xs">stars</span> Early Life IQ Ignition Program — INVENTFEST
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-2">JJC Nigeria (Public Schools Nationwide)</h3>
+              <div class="bg-surface-container-low p-3 rounded-xl border border-outline-variant/20 mb-3 text-xs text-on-surface-variant font-medium leading-relaxed">
+                <strong class="text-primary">Project 1 Pupil, 1 Problem Solver Ignition:</strong> Rolling out via Lagos State's Universal Basic Education Board (SUBEB), targeting 100,000 pupils in Primary 4-6.
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                An extra-curricular Elementary Entrepreneurship Education club focused on igniting Value Consciousness alongside Value Invention and Problem Solving Prowess in Primary school pupils, who through a fun-filled program would get ignited enough in the know-how to turn challenges and problems into viable first-ever, invented and made-in-Nigeria products and businesses/brands that serve the world with excellence. Operates in public schools nationwide.
+              </p>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex gap-4 flex-wrap mt-auto">
+              <button onclick="openModal('schoolInquiry')" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-button-text text-button-text px-8 py-3 rounded-lg btn-press transition-all">
+                Learn More
+              </button>
+              <button onclick="openModal('enrollModal')" class="bg-primary text-on-primary font-button-text text-button-text px-8 py-3 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1">
+                Enroll in JJC Nigeria
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Column Detailed Section: Structure | Weekly Classes | Features & Events -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-outline-variant/30">
+          <!-- Structure Section -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-primary mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-primary">groups</span> Troop Structure
+            </h4>
+            <div class="space-y-2 text-xs text-on-surface-variant">
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Troops:</strong> Organized into groups of 25 pupils/problem solvers, each known as a Troop.
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Caesar / Deputy Caesar (DC):</strong> The leader of a Troop is called a Caesar, and the assistant a Deputy Caesar.
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Centurion:</strong> The Head Teachers are known as Centurions.
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Vice Centurion (VC):</strong> Chosen teachers act as Troop co-ordinators. A primary school can only have a maximum of 2 Troops.
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Squad:</strong> A Troop's 5-aside team is called a Squad.
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface">Commander:</strong> All JJC student members are called Commanders.
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Classes / Practical Skilling -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-secondary mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-secondary">school</span> Weekly Classes / Skilling
+            </h4>
+            <div class="space-y-1.5 text-xs text-on-surface-variant">
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Sartorial Mastery 101:</strong> Tailoring &amp; Shoe Making Basics</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Hair Mastery 101:</strong> Grooming &amp; Hair Making Basics</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Food Creation Mastery 101:</strong> Cook &amp; Bake Basics</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Public Communications 101:</strong> Weekend Debate Slams</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Device Mastery 101:</strong> Phone/Computer Repairs &amp; Assembly</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Soft Tech Mastery 101:</strong> Artificial Intelligence Basics</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Social Media Mastery 101:</strong> Content Creation Basics</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Sales Mastery 101:</strong> Fastest Seller Challenge Series</span>
+              </div>
+              <div class="p-2 bg-white rounded-lg border border-outline-variant/20 flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Money Mastery 101:</strong> Savings &amp; Investment Basics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features, Events & Products -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col justify-between">
+            <div>
+              <h4 class="font-headline-md text-base text-[#7a5500] mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined fill-icon text-[#7a5500]">stars</span> Features &amp; Events
+              </h4>
+              <ul class="space-y-2 text-xs text-on-surface-variant mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined fill-icon text-[#7a5500] text-sm shrink-0 mt-0.5">storefront</span>
+                  <span><strong>Firsts Hub:</strong> Brick-and-mortar member-only club houses &amp; biography cafés</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined fill-icon text-[#7a5500] text-sm shrink-0 mt-0.5">psychology</span>
+                  <span><strong>Kingstarter Weekend IQ Ignition Slams:</strong> Fast-paced innovation sprints</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined fill-icon text-[#7a5500] text-sm shrink-0 mt-0.5">handshake</span>
+                  <span><strong>Meet the Kings of the Marketplace:</strong> Industry masterclasses every weekend</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined fill-icon text-[#7a5500] text-sm shrink-0 mt-0.5">bolt</span>
+                  <span><strong>Ignition Lite &amp; Max:</strong> How to invent value &amp; problem-to-product battles</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined fill-icon text-[#7a5500] text-sm shrink-0 mt-0.5">emoji_events</span>
+                  <span><strong>Flagship Events:</strong> Firsts-to-Invent Racing Championship, INVENTFEST</span>
+                </li>
+              </ul>
+
+              <div class="p-3 bg-white rounded-xl border border-outline-variant/20">
+                <strong class="text-on-surface text-xs block mb-1 font-bold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm text-primary">shopping_bag</span> Official JJC Gear &amp; Tools:
+                </strong>
+                <p class="text-xs text-on-surface-variant">
+                  • <strong>JJC Membership Jacket:</strong> Premium jacket (carries sponsor's ID).<br>
+                  • <strong>Kingstarter Card Game Kit:</strong> First-of-its-kind knowledge card game, made for Formula Firsts Racing.
+                </p>
+              </div>
+            </div>
+
+            <button onclick="openModal('enrollModal')" class="w-full mt-4 bg-primary text-on-primary font-button-text text-xs py-2.5 rounded-lg btn-press transition-all shadow-sm">
+              Enroll Cadet in JJC
+            </button>
+          </div>
+        </div>
+
+        <!-- Membership & Primary Benefits for Parents Banner -->
+        <div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center">
+          <div class="md:w-1/3 bg-white p-4 rounded-xl border-2 border-secondary/30 text-center shadow-sm w-full">
+            <span class="text-xs uppercase tracking-wider text-on-surface-variant font-label-bold">Official Banking Partnership</span>
+            <div class="text-xl font-headline-md font-bold text-primary mt-1">FCMB JJC Account</div>
+            <div class="text-xs font-bold text-secondary mt-0.5">₦5,000 Minimum (Managed by Parents)</div>
+            <p class="text-[11px] text-on-surface-variant mt-2">
+              Official banking partner of JJC Nigeria / Lagos SUBEB 1 Pupil, 1 Problem Solver campaign.
+            </p>
+          </div>
+          <div class="md:w-2/3">
+            <h4 class="font-label-bold text-sm text-on-surface uppercase tracking-wider mb-2 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-secondary text-base">family_restroom</span> Primary Benefits for Parents
+            </h4>
+            <ul class="space-y-1.5 text-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Firsts Hub Access:</strong> Access to a first-of-its-kind family play place where like-families learn and merry intelligently, always.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Fostering Job Creators:</strong> Contribute directly to the number of job creators in Nigeria by raising master problem-solvers right from your home.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Tomorrow's Kings Today:</strong> Become parents to the kings of tomorrow who solve today's challenges and invent what the world pays money for.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <!-- Junior Eagles Nigeria -->
+      <article class="lg:col-span-12 bg-white rounded-[16px] border border-surface-container-high shadow-level-1 card-hover transition-all duration-300 p-8 flex flex-col gap-8 relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <!-- Left Column: Official Logo & Identity -->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center bg-[#0d1b2e] rounded-2xl p-6 border border-surface-container-low text-center shadow-md">
+            <img class="w-48 h-auto object-contain mb-4 transform hover:scale-105 transition-transform drop-shadow-lg"
+              src="./junior-eagles-logo.jpg"
+              alt="Junior Eagles Nigeria Logo">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-1">Junior Eagles Nigeria</h2>
+            <span class="bg-secondary-container/20 text-secondary-fixed border border-secondary-fixed/40 px-3 py-1 rounded-full font-label-bold text-xs mt-1">Private Schools &amp; Parents</span>
+            <p class="text-xs text-white/80 font-medium mt-3 px-3 py-1 bg-white/10 rounded-lg border border-white/15">Powered by WingsStarter</p>
+          </div>
+
+          <!-- Right Column: Description & Actions -->
+          <div class="w-full lg:w-2/3 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-surface-container-low text-primary px-3 py-1 rounded-full font-label-bold text-xs mb-3 border border-primary/20">
+                <span class="material-symbols-outlined fill-icon text-xs">verified</span> Under 17s Only VIP Club
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Junior Eagles Nigeria (Private Schools &amp; Parents)</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                An Under 17s only Value Invention &amp; Pioneering (VIP) know-how club, powered by WingsStarter. An extra-curricular Elementary Entrepreneurship Education club focused on igniting Value Consciousness alongside Value Invention and Pioneering Prowess in Primary school pupils.
+              </p>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex gap-4 flex-wrap mt-auto">
+              <button onclick="openModal('schoolInquiry')" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-button-text text-button-text px-8 py-3 rounded-lg btn-press transition-all">
+                Learn More
+              </button>
+              <button onclick="openModal('enrollModal')" class="bg-primary text-on-primary font-button-text text-button-text px-8 py-3 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1">
+                Join Junior Eagles
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Column Detailed Section: Guaranteed Benefits | Features | Terms & Conditions -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-outline-variant/30">
+          <!-- Guaranteed Benefits -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-primary mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-secondary">verified</span> Guaranteed Benefits
+            </h4>
+            <div class="space-y-2 text-xs text-on-surface-variant">
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface block mb-0.5 font-bold">To Students:</strong>
+                <span>1 Child, 1 Ignited Brain.</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface block mb-0.5 font-bold">To Parents:</strong>
+                <span>1 Family, 1 First Man To Invent Value</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface block mb-1 font-bold">To Schools:</strong>
+                <ul class="list-disc list-inside space-y-1 text-on-surface-variant">
+                  <li>Helps schools provide elementary value invention &amp; problem-solving education free. It means more value free.</li>
+                  <li>Provides opportunity for schools to co-own with their pupils' intellectual property that is tradeable.</li>
+                  <li>Helps schools provide pupils with exposure to the real world of industry early through excursions.</li>
+                  <li>Helps all participating pupils experience improved performance all round!</li>
+                  <li>Helps pupils gain new confidence and a new outlook home may not be able to provide.</li>
+                  <li>Helps schools deliver free basic vocational and elementary STEM education.</li>
+                  <li>Guaranteed earnings on every pupil (optional).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Section -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-secondary mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-secondary">stars</span> Features
+            </h4>
+            <ul class="space-y-2.5 text-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Daily mingle with the First Men to Invent &amp; Pioneer via WingsStarter</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Inter-school WingsStarter First-Man-to-Invent Quiz (IQ) Championship</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>How to Invent/New Product Creation Basics</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>In-house 5-aside First-to-Invent/Create New Product Challenge</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Open only to students whose school management registers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">schedule</span>
+                <span>Junior Eagles activities end after 1 term, and happen at weekends + 1 holiday, in partnership with the schools</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col justify-between">
+            <div>
+              <h4 class="font-headline-md text-base text-[#7a5500] mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined fill-icon text-[#7a5500]">payments</span> Terms &amp; Conditions
+              </h4>
+              <div class="bg-white p-3.5 rounded-xl border-2 border-secondary/30 mb-3 text-center">
+                <span class="text-xs uppercase tracking-wider text-on-surface-variant font-label-bold">WingsStarter School Set</span>
+                <div class="text-2xl font-headline-lg font-bold text-primary mt-0.5">₦40,000</div>
+                <span class="text-xs font-label-bold text-secondary">= 1 Set (5 copies of WingsStarter)</span>
+              </div>
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                  <strong class="text-on-surface block mb-1 font-bold">Benefits to Schools:</strong>
+                  <ul class="list-disc list-inside space-y-1">
+                    <li>Guarantees membership to a maximum of 5 students into Junior Eagles</li>
+                    <li>Schools are free to charge a minimum of ₦5k each and ₦10k at most for membership per student</li>
+                  </ul>
+                </div>
+                <p class="p-2 bg-surface-container rounded-lg border border-outline-variant/20 italic text-[11px] leading-relaxed">
+                  <strong>Note:</strong> Schools are free to select from a rich list of foreign and local Firsts men to invent.
+                </p>
+              </div>
+            </div>
+            <button onclick="openModal('schoolInquiry')" class="w-full mt-4 bg-secondary text-on-primary font-button-text text-xs py-2.5 rounded-lg btn-press transition-all shadow-sm">
+              Inquire for School Partnership
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Junior Kings (Kings of the Marketplace) -->
+      <article class="lg:col-span-12 bg-white rounded-[16px] border-2 border-[#c9a227]/40 shadow-level-1 card-hover transition-all duration-300 p-8 flex flex-col gap-8 relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <!-- Left Column: Official Logo & Identity -->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center bg-[#0d1b2e] rounded-2xl p-6 border border-[#c9a227]/40 text-center shadow-level-2">
+            <img class="w-48 h-auto object-contain mb-4 transform hover:scale-105 transition-transform drop-shadow-lg"
+              src="./junior-kings-logo.jpg"
+              alt="Junior Kings Logo">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-1">Junior Kings</h2>
+            <p class="text-sm font-label-bold text-[#ffba27] uppercase tracking-wider mb-3">Kings of the Marketplace</p>
+            <div class="flex flex-wrap gap-2 justify-center mb-3">
+              <span class="bg-[#c9a227]/20 text-[#ffdea9] border border-[#c9a227]/40 px-3 py-1 rounded-full font-label-bold text-xs">Youth Churches Nationwide</span>
+              <span class="bg-secondary-container/20 text-secondary-fixed border border-secondary-fixed/40 px-3 py-1 rounded-full font-label-bold text-xs">KingsMaker10x™ Powered</span>
+            </div>
+            <p class="text-xs text-white/90 italic font-semibold px-3 py-1.5 bg-white/10 rounded-lg border border-white/15">"Church Kids Are Born To Rule... Crown Them!"</p>
+          </div>
+
+          <!-- Right Column: Brief, Vision, Mission & Scriptural Guarantee -->
+          <div class="w-full lg:w-2/3 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs uppercase tracking-widest text-[#7a5500] font-label-bold bg-[#ffdea9] px-3 py-1 rounded-full">Brand Lines</span>
+                <span class="text-sm text-primary font-label-bold italic">"Think Like a Parent, Act Like a Shrewd Pastor!"</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-2">An Under 17s Only Value Invention &amp; Pioneering (VIP) Know-How Club</h3>
+              <p class="text-xs text-secondary font-bold uppercase tracking-wider mb-2">Powered by the KingsMaker10x™</p>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Junior Kings Nigeria is an extra-curricular Elementary Entrepreneurship Education Club focused on igniting Value Consciousness alongside Value Invention and Pioneering Prowess in Church Under 17s, who through a fun-filled program would get ignited enough in the know-how to turn challenges and problems into viable first-ever, invented and made-by-believers products and brands.
+              </p>
+
+              <!-- Vision & Mission Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/20">
+                  <h4 class="font-label-bold text-label-bold text-[#7a5500] mb-1 flex items-center gap-2">
+                    <span class="material-symbols-outlined fill-icon text-sm">visibility</span> Vision
+                  </h4>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">
+                    Raise a new generation of value invention and pioneering centric Church youths who turn ideas into unicorns and world power brands out of Nigeria. <strong class="text-[#7a5500]">Expected delivery: 1 Youth, 1 Unicorn Builder.</strong>
+                  </p>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/20">
+                  <h4 class="font-label-bold text-label-bold text-secondary mb-1 flex items-center gap-2">
+                    <span class="material-symbols-outlined fill-icon text-sm">flag</span> Mission
+                  </h4>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">
+                    <strong class="text-secondary font-bold text-sm block mb-1">10 Million Church Under 17s. 10 Million Crowns. 10 Years Nigeria.</strong>
+                    Empowering faith-based communities to lead national industrial and technological pioneering.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Performance Guarantee Scripture -->
+              <div class="bg-gradient-to-r from-[#7a5500]/10 via-[#c9a227]/15 to-transparent p-4 rounded-xl border-l-4 border-[#c9a227] mb-6">
+                <span class="font-label-bold text-xs uppercase tracking-wider text-[#7a5500] block mb-1">Performance Guarantee Statement</span>
+                <p class="font-body-md text-on-surface font-semibold italic">
+                  "...And saviours shall come up on Mount Zion to govern the Mount of Esau, and the Kingdom will be the Lord's" <span class="not-italic text-sm font-bold text-primary">— Obadiah 21</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex gap-4 flex-wrap">
+              <button onclick="openModal('churchInquiry')" class="bg-primary text-on-primary font-button-text text-button-text px-8 py-3 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1">
+                Register Church Track
+              </button>
+              <button onclick="openModal('churchModal')" class="border-2 border-[#7a5500] text-[#7a5500] hover:bg-[#ffdea9]/30 font-button-text text-button-text px-6 py-3 rounded-lg transition-all btn-press">
+                View Curriculum &amp; Offer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guaranteed Benefits & Features & Terms Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-outline-variant/30">
+          <!-- Benefits -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-primary mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-secondary">verified</span> Guaranteed Benefits
+            </h4>
+            <div class="space-y-2 text-sm text-on-surface-variant">
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface text-xs block mb-0.5">1. To Child:</strong>
+                <span class="text-xs">1 Child, 1 Ignited Imagination, 1 Brainchild.</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface text-xs block mb-0.5">2. To Parents:</strong>
+                <span class="text-xs">1 Family, 1 First Man To Invent &amp; Pioneer.</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-outline-variant/20">
+                <strong class="text-on-surface text-xs block mb-1">3. To Children &amp; Youth Church:</strong>
+                <ul class="list-disc list-inside space-y-1 text-xs text-on-surface-variant">
+                  <li>Free elementary value invention &amp; problem-solving education</li>
+                  <li>Conscious ownership of family intellectual property</li>
+                  <li>Real-world industry exposure powered by faith early</li>
+                  <li>Improved academic performance all round</li>
+                  <li>New confidence and fresh kingdom outlook</li>
+                  <li>Early-linking invention &amp; productivity with Jesus Christ and Church</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col">
+            <h4 class="font-headline-md text-base text-[#7a5500] mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined fill-icon text-[#c9a227]">stars</span> Key Program Features
+            </h4>
+            <ul class="space-y-2.5 text-xs text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Mingle with the First Men to Invent &amp; Pioneer via WingsStarter</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>How to Invent Know-How Basics</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>In-house 5-aside First-to-Invent Challenge</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Inter-church WingsStarter First-Man-to-Invent Quiz (IQ) Championship</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">check_circle</span>
+                <span>Open to Under 17s only</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0 mt-0.5">schedule</span>
+                <span>Junior Kings activities happen at weekends + holidays</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Terms & Investment -->
+          <div class="bg-surface-bright p-5 rounded-xl border border-outline-variant/30 flex flex-col justify-between">
+            <div>
+              <h4 class="font-headline-md text-base text-secondary mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined fill-icon text-secondary">payments</span> Terms &amp; Sponsorship
+              </h4>
+              <div class="bg-white p-3.5 rounded-xl border-2 border-secondary/30 mb-3 text-center">
+                <span class="text-xs uppercase tracking-wider text-on-surface-variant font-label-bold">WingsStarter Church Pack</span>
+                <div class="text-2xl font-headline-lg font-bold text-primary mt-0.5">₦100,000</div>
+                <span class="text-xs font-label-bold text-secondary">= 1 Set (12 copies of WingsStarter)</span>
+              </div>
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <p class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-sm text-secondary shrink-0">check</span>
+                  <span><strong>Guarantees membership of 30 children</strong> in Junior Kings (hugely discounted).</span>
+                </p>
+                <p class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-sm text-secondary shrink-0">check</span>
+                  <span>To be powered by sponsorship after church agrees.</span>
+                </p>
+                <p class="p-2 bg-surface-container rounded-lg border border-outline-variant/20 italic text-[11px] leading-relaxed">
+                  <strong>Note:</strong> Churches are free to select from a rich list of Firsts men to invent available, including Nigerian Firsts. Special requests welcome.
+                </p>
+              </div>
+            </div>
+            <button onclick="openModal('churchInquiry')" class="w-full mt-4 bg-secondary text-on-primary font-button-text text-xs py-2.5 rounded-lg btn-press transition-all shadow-sm">
+              Request Church Sponsorship Pack
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SERVICES PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-services">
+  <header class="relative pt-stack-lg pb-stack-lg overflow-hidden bg-surface-container-low">
+    <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay:2s;"></div>
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-surface-tint/10 text-primary font-label-bold text-label-bold mb-4 border border-primary/20">What We Offer</span>
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Our Services</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Empowering the next generation through tailored educational programs, strategic partnerships, and innovative tools designed for growth and achievement.</p>
+    </div>
+  </header>
+  <section class="py-stack-lg bg-surface">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- School Partnerships -->
+        <div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+          <div class="w-16 h-16 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl">handshake</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">School Partnerships</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">We collaborate closely with visionary schools to integrate the Firsts Academy curriculum. Our partnership model enhances existing educational frameworks with modern, practical leadership and innovation modules.</p>
+          <div class="relative z-10 mt-auto">
+            <a onclick="openModal('schoolModal')" class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link cursor-pointer">
+              Explore Partnerships <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <!-- WingsStarter -->
+        <div class="glass-card p-8 flex flex-col group relative overflow-hidden border-t-4 border-t-primary">
+          <div class="absolute inset-0 bg-gradient-to-br from-surface to-primary/5 opacity-50"></div>
+          <div class="flex justify-between items-start mb-6 relative z-10">
+            <div class="w-16 h-16 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors duration-300">
+              <span class="material-symbols-outlined fill-icon text-3xl">rocket_launch</span>
+            </div>
+            <div class="w-24 h-12 bg-surface-container rounded-lg border border-outline-variant/30 flex items-center justify-center text-xs text-on-surface-variant font-label-bold">WingsStarter Logo</div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2 relative z-10">WingsStarter Product</h3>
+          <span class="inline-block py-1 px-3 rounded-full bg-tertiary-container/30 text-tertiary font-label-bold text-[12px] mb-4 w-max relative z-10">Imagination Power (IP) Ignition Aid</span>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">A proprietary toolkit designed to spark creativity. <strong class="text-on-surface font-bold">Bonus:</strong> When a school purchases WingsStarter, they receive the Junior Eagles Club as an exclusive add-on benefit for their students.</p>
+          <div class="relative z-10 mt-auto">
+            <a onclick="openModal('wingstarter')" class="bg-primary text-on-primary font-button-text text-button-text px-6 py-3 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all inline-flex items-center cursor-pointer">Get WingsStarter</a>
+          </div>
+        </div>
+        <!-- Church Youth Programs -->
+        <div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+          <div class="absolute bottom-0 right-0 w-40 h-40 bg-surface-container-highest rounded-tl-full -mr-10 -mb-10 transition-transform group-hover:scale-110"></div>
+          <div class="w-16 h-16 rounded-2xl bg-surface-container-highest text-inverse-surface flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-inverse-surface group-hover:text-surface transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl">diversity_3</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">Church Youth Programs</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">Tailored developmental programs specifically designed for faith-based communities. Our Junior Kings track aligns foundational values with modern leadership skills for holistic growth.</p>
+          <div class="relative z-10 mt-auto">
+            <a onclick="openModal('churchModal')" class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link cursor-pointer">
+              View Junior Kings Track <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <!-- Corporate & Leisure -->
+        <div class="glass-card p-8 flex flex-col group relative overflow-hidden">
+          <div class="absolute top-1/2 left-0 w-24 h-24 bg-tertiary-fixed/30 rounded-full -ml-12 -mt-12 transition-transform group-hover:scale-150"></div>
+          <div class="w-16 h-16 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
+            <span class="material-symbols-outlined fill-icon text-3xl">corporate_fare</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10 group-hover:text-primary transition-colors">Corporate &amp; Leisure</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 relative z-10">Engaging workshops and retreats designed for corporate teams and leisure groups. We bring the Firsts Academy methodology to adults, fostering innovation, teamwork, and continuous learning.</p>
+          <div class="relative z-10 mt-auto">
+            <a onclick="openModal('corporateModal')" class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors group/link cursor-pointer">
+              Book a Workshop <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PRODUCTS PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-products">
+  <header class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop mb-stack-lg relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-primary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-sm">Shop Our Products</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Equip your young leaders with the tools they need to build, learn, and grow. Explore our exclusive FIRSTS ACADEMY kits and gear.</p>
+    </div>
+  </header>
+  <section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <!-- Product 1 -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-64 bg-surface-container w-full overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMenFUFpTdWUhOLSQhaXtIUzO-0sTK0wiyPOvA_KsW78Je8oV7bgGoMdimcZeKLxcR6s30REMNBtlOtsC8_9eX_JgJRazknkrUv34C8QVS8MGtloEp6fuIbFJC74BQhIqGJDzOAs0ttoSlnVRhpADCT4Om8atDUo-buosKnyRwfNgqs05hIG3Xmh5N_SjZ58FEESmLoyawcaIHZjNgy5KzcOkC7Bhu4KzYI5GCmoa0fBMYzlGBR8uo"
+            alt="Kingstarter Card Game Kit">
+          <div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-bold text-label-bold">JJC Product</div>
+        </div>
+        <div class="p-stack-md flex flex-col flex-grow">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Kingstarter Card Game Kit</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">An engaging educational card game designed to spark strategic thinking and leadership skills in young minds.</p>
+          <div class="flex items-center justify-between mt-auto">
+            <span class="font-headline-lg text-headline-lg text-primary">₦15,000</span>
+            <button onclick="addToCart('kingstarter')" class="bg-primary hover:bg-primary-container text-on-primary p-3 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-200 flex items-center justify-center cursor-pointer" title="Add to Cart" aria-label="Add Kingstarter Card Game Kit to Cart">
+              <span class="material-symbols-outlined">add_shopping_cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-64 bg-surface-container w-full overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdPssg4aaFKF6QUDsrz69hiQS3a00vW4nE_H-ifnhkRkpMhIR-rpTLl60jibeOvlIrk1aAh4QjAO3H5nPe7qZPLZwXkU-VXnMCSB-QjWXASQrV-iB3gnC6KigIm32pVxOQV4pb3RiaBXzyQXwpoq9dYcKp4Wdo3nvgypCLZE3iTUpe7qcbe7sjPhVn6pnAlH1beRfUshahqweX6VXO1sWfYkcpV68dCG9tV3y84m6mjE7bhjW1Hzg4"
+            alt="JJC Membership Jacket">
+        </div>
+        <div class="p-stack-md flex flex-col flex-grow">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2">JJC Membership Jacket</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Premium academy jacket. Note: Jacket shall carry sponsor's ID. Wear your academy pride.</p>
+          <div class="flex items-center justify-between mt-auto">
+            <span class="font-headline-lg text-headline-lg text-primary">₦25,000</span>
+            <button onclick="addToCart('jjc-jacket')" class="bg-primary hover:bg-primary-container text-on-primary p-3 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-200 flex items-center justify-center cursor-pointer" title="Add to Cart" aria-label="Add JJC Membership Jacket to Cart">
+              <span class="material-symbols-outlined">add_shopping_cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-64 bg-surface-container w-full overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAncDf_gYcxfeqV3Gs6ZbDOK8Lolr0X4S49sP1Ie8d0qZR1b_HZaXbcgbbEMiOmXdtbLE2ra31YkNfebsP9XBN1MVDuKsMMLN4y08qcHiPQN25eQm2Fo_1JsLvDrmCowiO4SU5EsPJqUnRza6T6c80XEh0Bkv7ikKCLH4fchqMXEAbbHNhdbN0AjXX0ApJZ0RSjXI4FpqLloGzWKyPmn27xBaJm97fYRakw8cTpRCEbmdXx1eJDDmsJ"
+            alt="Junior Eagles WingsStarter Kit">
+          <div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full font-label-bold text-label-bold">Bundle Deal</div>
+        </div>
+        <div class="p-stack-md flex flex-col flex-grow">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Junior Eagles / WingsStarter Kit</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">The ultimate starter pack for aspiring leaders. Includes comprehensive materials for the Wings program.</p>
+          <div class="flex flex-col mt-auto gap-2">
+            <span class="font-label-bold text-label-bold text-secondary text-sm">1 set of WingsStarter = 5 copies</span>
+            <div class="flex items-center justify-between">
+              <span class="font-headline-lg text-headline-lg text-primary">₦40,000</span>
+              <button onclick="addToCart('wingsstarter-kit')" class="bg-primary hover:bg-primary-container text-on-primary p-3 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-200 flex items-center justify-center cursor-pointer" title="Add to Cart" aria-label="Add Junior Eagles / WingsStarter Kit to Cart">
+                <span class="material-symbols-outlined">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     GALLERY PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-gallery">
+  <main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <section class="text-center mb-stack-lg">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-unit">Gallery</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Celebrating the journey of our young inventors and pioneers.</p>
+    </section>
+    <section class="masonry-grid">
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-64 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0cTVGAPQRpvC05qpyXVmoNralTZi_q3FGz1iaRcGPKGT-JfvYb9meU4fg0koVbwSBT6riAwL0ZxQVNLNXdB7vR6gs6YQowYsTGYpLU6ywh8g4jsthvXseFj3s5b4iTQTmxM52_AzYZp2Cm19gyCMWb-ekbL-9Kb7RnwoHs_zne8JTpGoki_DBOqw0Rn4elCuM2v37WKq2lANW-3HZhSLxwH1d8_h6oEFCWEkIwuhhIZp8EivDUpRi" alt="Gallery 1">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Innovation</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">JJC Classroom Innovation</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-96 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtixK85c10FXXg_GephuE2NR58q-GqPNtT51S5_8BQDbBd3LnUxh9t5zSDC9gZu4JbiRlDTrjwjeYR6JnBjVA85RviXm3cyhFs-UBBFn_OaQ7NWX2H2udn3pqw667UO8UF2yh6UUoFwtzJu0frnsgHjNjf0RKzfHj-s9LPmU28Xle2TvR6iIs-FPJAN8YVMZGigG-jAcnx1bUlIRYSMmn3DmtzD8KQxw1mzAK4gD73_XOp0ilr5FIs" alt="Gallery 2">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold rounded-full mb-2">Competition</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">National Racing Championship Highlights</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-48 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJh_0IK6eFs2Cnz721tZDYLCGG3S6y4aSwWHQPqGlBkTEhb2S4xbORZYfSrpn9z41qNjmOgrjERgRDAbt9e-T50qMkvzVOvG-ZJ0st_pMl-lTwv_4UjTLhazJwHPGCJZ45XIypYp0wNETzFFYhZHM8swww3ZBLKo8d6n1MUInKcoLT5WbjXlxhJB5lVCOFxDCUBUDfv3CWcfFwUTkp3EpQEF1MBAyeOUmw5Ua8q1sjflk2SO8KA9By" alt="Gallery 3">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Workshop</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">Kingstarter Weekend Ignition Slams</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-80 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAougT5hJ1rkAmQeZdjXSHExpz43PEd8lmff_0wFg3C9lIftjfdHJRpxL-hy7W41Ac593w8xYDjWURn9gWE-PqHK93Kdd0fbJM8YP23HM0hUFfhe6b224qlNTkS8qm-3S1MagdZgHh8j_Oh2Fz63rIW5jXhglVu9DbjWnfqfrT80hNSd1gXTzab8t8oPDX2NZBcHO4QPaU2xlJllTlZnyTZtLmeZvCBYzKnGPnG7iOAhaAuu9YQtcmb" alt="Gallery 4">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold rounded-full mb-2">Projects</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">Student Project Showcase</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-72 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkk-h1BHUcaTcU3_cSA13oHl9P8EIl_J5mWAC8O2WDJea1PBjU8j12TUjjJKnCeH_HQiQoUaMJho6hplAbungENxZ159n5kSjSEs8BPSfDvgKXRNBlv9rw2-iZMx0rrzBBAO3JkHeKwdM61Y18ZbjnWNUshKNuNipxnrgS_B58HzhGV6KjfY0No2Li7TbpLFGUS7S80a_O25pxikEg0JyvOShrG7c84ccy9lH7Z4waQHqjc-8k_0LA" alt="Gallery 5">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold rounded-full mb-2">Community</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">Community Outreach Events</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-56 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-yiBt1iS-wRgmbkqovaABAWcZEv5fXMxYZ7UrD1LfXv8H2XNkD2_iFm6Ai9BC5KXsGh79OX47T19C73ny973pPM33MckbuOLPEJYBq6Q9wekLwXhbFncmKvnw55GmUbvO_euJ6tVtnY0Entw8OtRfMh2_O299gbqOPwPbi8Qg2mFEy0ZYd1a_dXzjofNtA94xJyomVvzxEYZ_kaU1R3yd4i-l9bEAvQPUQwQ8J-PHqv6_6uHt6z4" alt="Gallery 6">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Workshop</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">Junior Eagles WingsStarter Workshop</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-64 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJOXvYz1LM4TC001SAQcDwqaqTzjFAlGuxd3SMSRowWGHzNF5D7nWI6UP7H-WKvjQnNHSDFJ7pYKTj8BHcd_qBfSYVO_wM-zLw9iyOI-Oi83bsZ8qCn7us1X3cClHGjn9Js4ehr7BJ9U96Aq1LWRbpcz4WqMuDjI45TlyUWGmuoEWFD3c5nFsT21MheaFFSN2bN7OVOOKTtbn0i3gWZIwF5PZZfVnCFZIKZh5XeHEDBJY6vird7lE" alt="Gallery 7">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold rounded-full mb-2">Learning</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">JJC Classroom Innovation</h3>
+        </div>
+      </div>
+      <div class="masonry-item group relative rounded-[16px] overflow-hidden bg-surface-container-lowest border border-outline/20 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <div class="h-80 bg-surface-container w-full relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmYygSiEbI35Awiyq5irTMmZsjG6bgT-zP0IxVLd5bUIa-b-U-4GWjU-Aw8cRXWn0qbqN6sA_QR3S6CgQ95r-DViCSlHTQDqBIYqDZoOwYx5V1-gkdt6qIWE27LJf8EA3jxQvxtTejW5TgZ4pfRHr9HVs2uCGP3Ayv1Yp_l0lyn-ONjlSIB86OPm5isk-LuyloWbXgXUZanf_-biZOLEVYtyYLI8Ae65T5gJ3yf3XwcZIDINqk9aH" alt="Gallery 8">
+        </div>
+        <div class="p-stack-sm absolute bottom-0 left-0 w-full bg-gradient-to-t from-on-background/90 to-transparent">
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold rounded-full mb-2">Exhibition</span>
+          <h3 class="font-headline-md text-headline-md text-surface-container-lowest">Annual Student Exhibition</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     APPROVALS PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-approvals">
+  <main class="flex-grow pt-[20px] pb-stack-lg max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop">
+    <section class="text-center py-stack-lg flex flex-col items-center max-w-3xl mx-auto space-y-stack-sm">
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Our Approvals &amp; Partnerships</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">Empowering young minds since 2014. FIRSTS ACADEMY is proud to work alongside leading government and financial institutions to drive value invention across Africa.</p>
+    </section>
+    <!-- Partners -->
+    <section class="py-stack-md border-y border-outline-variant/30 my-stack-lg bg-surface-container-lowest rounded-xl shadow-level-1">
+      <h2 class="text-center font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest mb-stack-sm">Trusted By</h2>
+      <div class="flex flex-wrap justify-center items-center gap-margin-desktop opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="flex items-center gap-unit">
+          <img class="h-16 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJRUylATcZnl8c7ZOzt9HWhpZLRdYSqK4oMR7vX5VY7P3R59QfEIAvRBpLX9RR0AMrKhDo6fdd8G0keQRQ423K5QoQK4kEPLz2XhTitU3KyYVptGSdMYu0QIQ8akK51cUrRi9sZWIHOmvDR7y11v6_WGTAbIxi5s8LxcWDGO7hQJcGOdCI_X8YayDF6yrg3kuA93-v5D3nTL9o5-eMY6V7z568CnBWTaZqNs39WPc6jUTOUTodZNMe"
+            alt="Lagos State Government">
+          <span class="font-label-bold text-on-surface hidden md:block">Lagos State Government</span>
+        </div>
+        <div class="flex items-center gap-unit">
+          <img class="h-16 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnUwhvphhAqTfqs4JBUkulvsLc1_tWscYQF-hB8yGmdem3Ds6K3i13l1Mfr_A2Vg_f2p-ujj6nY17lZ6E8L-xMUvt-KsstltswP4kT9bHrdgEwhK8opzSae9MpHoi_3yafkrVHiDM5PffLUOMJbLPAz1vohaZoMu-Se0lIfY5ZBuTow-uvQDuYfHzigITWPhbx-G16SDykLDLw3eZnWgShUW3UGhGDpZF1bwHS9LRbilBD4IOpvmpI"
+            alt="Universal Basic Education Board">
+          <span class="font-label-bold text-on-surface hidden md:block">Universal Basic Education Board</span>
+        </div>
+        <div class="flex items-center gap-unit">
+          <img class="h-16 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfw71hwWBhEIZ85nHVZhjKLU5u892x7Ft5ugHxg2ehohzDldm7Xgd2YeQ5aEXhtGM9z3jqZ8VmaUqdxBbtYgvl8tzz4APLye-8xRVLCW59haQx5054dlazEQ3AujBizkL-YHOJVRDJzSSA_6pm-CyOo-46OIJX0wNFIu8_rLV999YaEmNoj8QBFt5PvyupcNqg20lS3Z2ILfrFz1jBpD_E9D8AmUw3078RrRr_5e_pox5o6wHvp3eN"
+            alt="FCMB">
+          <span class="font-label-bold text-on-surface hidden md:block">FCMB</span>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-stack-lg">
+      <div class="text-center mb-stack-lg">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">What Our Community Says</h2>
+        <div class="h-1 w-16 bg-secondary mx-auto mt-4 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <div class="bg-surface-container-lowest p-stack-md rounded-[16px] border border-outline-variant/30 shadow-level-1 card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div>
+            <div class="flex text-tertiary-fixed-dim mb-4">
+              <span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant italic mb-stack-md">"The transformation in my daughter's confidence is astounding. FIRSTS ACADEMY didn't just teach her to code; they taught her to solve real-world problems. The curriculum is genuinely innovative."</p>
+          </div>
+          <div class="flex items-center gap-4 mt-auto border-t border-outline-variant/20 pt-4">
+            <img class="w-12 h-12 rounded-full object-cover border-2 border-secondary"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE-l3HWPsIZbZFxFYcvmlNiV3lyaIBWiL7wglNbKm5d9tCX9PsSK0MAl7_AlLJYHrt6JwLCOVBrTptMRUtdZFN3iK-IJkgc9laAu01Ir_dVu8azG7ybtJwtwg2qs8IOMtnPnNiQ4gUEPF7EVwD6Y7iwPmYVcCOoLXBLQ8MDWfHVaxsUsC1335JLbd3wL35RpaPC9M_A3SzXSBXJFxK13BquYZdh0gDmOZ-nbDaE1BAUlkU-HQ43QMZ"
+              alt="Amina Bello">
+            <div><h4 class="font-label-bold text-label-bold text-on-surface">Amina Bello</h4><p class="text-sm text-on-surface-variant">Parent of JJC Student</p></div>
+          </div>
+          <div class="absolute top-4 right-4 opacity-10"><span class="material-symbols-outlined text-6xl text-primary">format_quote</span></div>
+        </div>
+        <div class="bg-surface-container-lowest p-stack-md rounded-[16px] border border-outline-variant/30 shadow-level-1 card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-surface-tint/5 rounded-bl-full z-0"></div>
+          <div class="relative z-10">
+            <div class="flex text-tertiary-fixed-dim mb-4">
+              <span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant italic mb-stack-md">"As an educator, I'm highly critical of supplementary programs. FIRSTS ACADEMY exceeds all expectations. Their project-based approach aligns perfectly with modern pedagogical standards while keeping kids incredibly engaged."</p>
+          </div>
+          <div class="flex items-center gap-4 mt-auto border-t border-outline-variant/20 pt-4 relative z-10">
+            <img class="w-12 h-12 rounded-full object-cover border-2 border-primary"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAompkjWx_MzWbAWdddn1w0ODYGdsKxb3WqC-PFKogodLMUXmI-wK7-zuJhLK5UL9SR_H2w2zjNKgiCNy7Av2vPRp-71rK8CGhGqgdz7uVN3BS3DMGLjYMGhqmTC72mR04y_P1v6CtViOBBIkfW_TJ7mZ3MiPNwsbB45ijphrADeiwRdKDsj2Xt-bcNXlsRUAhoRC6KM1MgOPUj7qRizg2CitB-YPvF-zuTSPikASi__o9vdeN9_-od"
+              alt="Dr. Samuel Ojo">
+            <div><h4 class="font-label-bold text-label-bold text-on-surface">Dr. Samuel Ojo</h4><p class="text-sm text-on-surface-variant">School Administrator</p></div>
+          </div>
+        </div>
+        <div class="bg-primary text-on-primary p-stack-md rounded-[16px] shadow-level-2 card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-surface-tint opacity-90 z-0"></div>
+          <div class="relative z-10">
+            <div class="flex text-secondary-fixed mb-4">
+              <span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span><span class="material-symbols-outlined fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md italic mb-stack-md">"The partnership with FIRSTS ACADEMY has been instrumental. Their structured curriculum and emphasis on practical tech skills are exactly what the region needs to foster the next generation of innovators."</p>
+          </div>
+          <div class="flex items-center gap-4 mt-auto border-t border-white/20 pt-4 relative z-10">
+            <img class="w-12 h-12 rounded-full object-cover border-2 border-secondary-fixed"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvxYr3IJ-3ecJtiW8-F7ePsath5Jm3c53jgQazSD6OYjx4tl42ZNHDcoCGgAM0FlmqHGsWNcubsKtRYxoidThXFos9cnSxnMphwEJwKl1IfFYYJcNz3LPwo7VWkMQ7n_cAWRjrrHf85liPsBx26fqDbM7ApOF2oFRY3Jv1h7jiUiq6rT8lIsAMeBwxNUhzyCODL7Gpg263QWozz1XrIjw-Hd8G1mjkNrrnL9FY14WBB2LCV-x0UvsX"
+              alt="Chika Nwachukwu">
+            <div><h4 class="font-label-bold text-label-bold">Chika Nwachukwu</h4><p class="text-sm opacity-90">Corporate Partner, FinTech</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CONTACT PAGE
+════════════════════════════════════════ -->
+<div class="page-section pt-[80px]" id="page-contact">
+  <main class="pt-[120px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto flex flex-col gap-stack-lg">
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tighter mb-4">Register Your Child / Get In Touch</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">We're excited to hear from you. Whether you're ready to enroll or just have a few questions about our World Power 2045 vision, our team is here to help.</p>
+    </section>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start">
+      <!-- Form -->
+      <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Send a Message</h2>
+        <form class="flex flex-col gap-stack-sm" onsubmit="return false;">
+          <div>
+            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Full Name</label>
+            <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Enter parent's or child's name" type="text">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Email Address</label>
+              <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="your@email.com" type="email">
+            </div>
+            <div>
+              <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Phone Number</label>
+              <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="e.g., 0808 782 8554" type="tel">
+            </div>
+          </div>
+          <div>
+            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Current School (Optional)</label>
+            <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Where does your child currently study?" type="text">
+          </div>
+          <div>
+            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Your Message</label>
+            <textarea class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md resize-none" placeholder="How can we help you today?" rows="4"></textarea>
+          </div>
+          <button type="submit" class="mt-4 w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg shadow-level-1 hover:shadow-level-2 border-b-2 border-on-primary-fixed-variant btn-press transition-all duration-200 flex justify-center items-center gap-2">
+            Submit Registration <span class="material-symbols-outlined text-sm">send</span>
+          </button>
+        </form>
+      </div>
+      <!-- Contact Info -->
+      <div class="flex flex-col gap-stack-md">
+        <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20">
+          <h3 class="font-headline-md text-headline-md text-primary mb-6">Contact Information</h3>
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-start gap-4 group cursor-pointer hover:bg-surface-bright p-2 -ml-2 rounded-lg transition-colors">
+              <div class="bg-primary/10 p-2 rounded-full text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined fill-icon">location_on</span></div>
+              <div><p class="font-label-bold text-label-bold text-on-surface">Address</p><p class="font-body-md text-on-surface-variant">11 Tiemo Crescent, Egbeda, Lagos.</p></div>
+            </li>
+            <li class="flex items-start gap-4 group cursor-pointer hover:bg-surface-bright p-2 -ml-2 rounded-lg transition-colors">
+              <div class="bg-secondary-container/30 p-2 rounded-full text-secondary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined fill-icon">chat</span></div>
+              <div><p class="font-label-bold text-label-bold text-on-surface">WhatsApp</p><a class="font-body-md text-on-surface-variant hover:text-secondary font-bold transition-colors" href="https://wa.me/23407054109840">234 0705 410 9840</a></div>
+            </li>
+            <li class="flex items-start gap-4 group cursor-pointer hover:bg-surface-bright p-2 -ml-2 rounded-lg transition-colors">
+              <div class="bg-primary/10 p-2 rounded-full text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined fill-icon">call</span></div>
+              <div><p class="font-label-bold text-label-bold text-on-surface">Telephone</p><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="tel:+2348087828554">234 808 782 8554</a></div>
+            </li>
+            <li class="flex items-start gap-4 group cursor-pointer hover:bg-surface-bright p-2 -ml-2 rounded-lg transition-colors">
+              <div class="bg-primary/10 p-2 rounded-full text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined fill-icon">mail</span></div>
+              <div><p class="font-label-bold text-label-bold text-on-surface">Email</p><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:firstsacademynigeria@gmail.com">firstsacademynigeria@gmail.com</a></div>
+            </li>
+            <li class="flex items-start gap-4 group cursor-pointer hover:bg-surface-bright p-2 -ml-2 rounded-lg transition-colors">
+              <div class="bg-primary/10 p-2 rounded-full text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined fill-icon">language</span></div>
+              <div><p class="font-label-bold text-label-bold text-on-surface">Website</p><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="http://www.firstsacademyng.com" target="_blank">www.firstsacademyng.com</a></div>
+            </li>
+          </ul>
+        </div>
+        <!-- Map -->
+        <div class="rounded-2xl overflow-hidden border border-outline-variant/30 shadow-level-1 relative h-64 group">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQqP-4QWUu7WomLFTi69txJB0NZWtCrRSDpdb61OHiWIFNE8YBvsT9nVLrec9phrnuN7IdNkPV7FUgi1lsYlzGr0aGf-I9ZyoZJXovp7oC3NcecCE50hIYO7DS6NjbjxlWpiU_beNNwE2wndpJDQlf06InZHblGlnFBhD1qQhs9j_wa5V5h7brC6VMXJ4H8y4KxuEBu4TIUg5lGPbNo5S7nx3ZDm75_sDIeN3dAbDkuptPZQ8DgZLN"
+            alt="Map of Lagos, Egbeda">
+          <div class="absolute inset-0 bg-gradient-to-t from-on-background/40 to-transparent pointer-events-none flex items-end p-4">
+            <span class="bg-surface-container-lowest text-primary font-label-bold text-label-bold px-3 py-1 rounded-full shadow flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm">pin_drop</span> Egbeda, Lagos
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-stack-lg mt-stack-lg">
+  <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto gap-stack-md">
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <div class="flex items-center gap-4">
+        <img alt="FIRSTS ACADEMY Logo" class="h-12 w-auto object-contain grayscale brightness-200"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5meWNCUqCa053OLFxU67_Vh7ifrTCBgrYBRtmYD13C4OcuR-bv8OcB5Qe5wrRWeXP6zFdM2U6tOy2_yabs773VQk20lEtwQUNgcQxGj7i60cceQEseBgB2mPa1IzGaucvPrs063BqujWo-_WF_yAC8Q_fSyGM8ROOTm6Zdr8JUt2wisBnLsqqNu-yLts56OwoDEQE2J12mwGd4TEQrV3UMaGPy1zo9xGE70RUGJI2pkChMFgheJ4b7pSabvJ68FjyIQ">
+        <span class="font-headline-md text-headline-md text-surface dark:text-primary uppercase">FIRSTS ACADEMY</span>
+      </div>
+      <p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 text-center md:text-left">
+        11 Tiemo Crescent, Egbeda, Lagos<br>
+        © 2024 FIRSTS ACADEMY. Africa's Premier Under 17s Pioneering Education Platform.
+      </p>
+      <div class="flex gap-4 mt-2">
+        <a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+        <a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+      </div>
+    </div>
+    <nav class="flex flex-wrap justify-center gap-6">
+      <a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Privacy Policy</a>
+      <a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Terms of Service</a>
+      <a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">FAQ</a>
+      <a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors hover:underline" href="#">Careers</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<div class="wa-floating">
+  <a href="https://wa.me/23407054109840" target="_blank" class="flex items-center gap-2 bg-[#25d366] text-white font-button-text text-button-text px-4 py-3 rounded-full shadow-level-2 hover:shadow-level-2 hover:-translate-y-1 transition-all duration-200">
+    <span class="material-symbols-outlined fill-icon">chat</span> WhatsApp Us
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MODALS
+════════════════════════════════════════ -->
+
+<!-- ENROLL MODAL -->
+<div class="modal-overlay" id="enrollModal" onclick="closeOut(event,'enrollModal')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('enrollModal')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+        <img class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5meWNCUqCa053OLFxU67_Vh7ifrTCBgrYBRtmYD13C4OcuR-bv8OcB5Qe5wrRWeXP6zFdM2U6tOy2_yabs773VQk20lEtwQUNgcQxGj7i60cceQEseBgB2mPa1IzGaucvPrs063BqujWo-_WF_yAC8Q_fSyGM8ROOTm6Zdr8JUt2wisBnLsqqNu-yLts56OwoDEQE2J12mwGd4TEQrV3UMaGPy1zo9xGE70RUGJI2pkChMFgheJ4b7pSabvJ68FjyIQ" alt="logo">
+      </div>
+      <div>
+        <div class="font-headline-md text-headline-md text-on-surface">Join FIRSTS ACADEMY</div>
+        <div class="font-body-md text-body-md text-on-surface-variant text-sm">Ignite your child's invention &amp; pioneering potential.</div>
+      </div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Parent / Guardian Name *</label><input type="text" placeholder="e.g. Dr. Ngozi Okafor" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number (WhatsApp preferred) *</label><input type="tel" placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Name *</label><input type="text" placeholder="e.g. Ebube" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Age (5–17) *</label><input type="number" placeholder="10" min="5" max="17" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Program Track *</label>
+        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
+          <option>JJC Nigeria (Junior Job Creators - Public Schools)</option>
+          <option>Junior Eagles Nigeria (Private Schools &amp; Parents)</option>
+          <option>Junior Kings (Kings of the Marketplace — Youth Churches)</option>
+        </select>
+      </div>
+      <div class="bg-secondary-container/30 rounded-lg p-3 flex items-center gap-2 text-sm text-on-secondary-container">
+        <span class="material-symbols-outlined fill-icon text-secondary text-base">check_circle</span>
+        Backed by FIRSTS ACADEMY Original Brainchild Performance Guarantee.
+      </div>
+      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1">Complete Enrollment</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCHOOL PARTNERSHIPS MODAL (info) -->
+<div class="modal-overlay" id="schoolModal" onclick="closeOut(event,'schoolModal')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('schoolModal')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center"><span class="material-symbols-outlined fill-icon text-2xl text-secondary">handshake</span></div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">School Partnerships</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <p class="font-body-md text-body-md text-on-surface-variant mb-4">We collaborate closely with visionary schools to integrate the Firsts Academy curriculum. Our partnership model enhances existing educational frameworks with modern, practical leadership and innovation modules.</p>
+    <div class="bg-surface-container-low rounded-lg p-4 mb-4">
+      <h4 class="font-label-bold text-label-bold text-on-surface mb-3">What's Included:</h4>
+      <ul class="space-y-2 text-sm text-on-surface-variant">
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>Certified curriculum and instructor toolkits</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>On-site facilitation and teacher-training workshops</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>Custom progress dashboard and patent ideation templates</li>
+      </ul>
+    </div>
+    <button onclick="closeModal('schoolModal');openModal('schoolInquiry')" class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Inquire Now</button>
+  </div>
+</div>
+
+<!-- SCHOOL INQUIRY FORM -->
+<div class="modal-overlay" id="schoolInquiry" onclick="closeOut(event,'schoolInquiry')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('schoolInquiry')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center"><span class="material-symbols-outlined fill-icon text-2xl text-secondary">handshake</span></div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">School Partnerships Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label>
+        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- WINGSTARTER MODAL -->
+<div class="modal-overlay" id="wingstarter" onclick="closeOut(event,'wingstarter')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('wingstarter')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined fill-icon text-2xl text-primary">rocket_launch</span></div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">WingsStarter Product Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label>
+        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHURCH MODAL (Junior Kings Info) -->
+<div class="modal-overlay" id="churchModal" onclick="closeOut(event,'churchModal')">
+  <div class="modal-box max-w-xl">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('churchModal')">✕</button>
+    <div class="flex items-center gap-4 mb-2">
+      <div class="w-16 h-16 bg-[#0d1b2e] rounded-xl flex items-center justify-center p-2 border border-[#c9a227]/40 shrink-0">
+        <img class="w-full h-full object-contain" src="./junior-kings-logo.jpg" alt="Junior Kings Logo">
+      </div>
+      <div>
+        <div class="font-headline-md text-headline-md text-on-surface">Junior Kings Nigeria</div>
+        <div class="text-xs font-label-bold text-secondary uppercase tracking-wider">Kings of the Marketplace — Youth Churches</div>
+      </div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-3"></div>
+    <div class="p-2.5 bg-[#ffdea9]/30 rounded-lg border border-[#c9a227]/30 mb-3 text-xs text-[#7a5500] font-semibold flex items-center gap-2">
+      <span class="material-symbols-outlined fill-icon text-[#c9a227] text-base">stars</span>
+      "Church Kids Are Born To Rule... Crown Them!"
+    </div>
+    <p class="font-body-md text-sm text-on-surface-variant mb-3">
+      Junior Kings Nigeria is an extra-curricular Elementary Entrepreneurship Education Club focused on igniting Value Consciousness alongside Value Invention and Pioneering Prowess in Church Under 17s.
+    </p>
+    <div class="bg-surface-container-low rounded-xl p-4 mb-4 border border-outline-variant/20 space-y-2">
+      <h4 class="font-label-bold text-xs uppercase tracking-wider text-on-surface flex items-center justify-between">
+        <span>WingsStarter Church Sponsorship Pack</span>
+        <span class="text-primary text-sm font-bold">₦100,000 / Set</span>
+      </h4>
+      <ul class="space-y-1.5 text-xs text-on-surface-variant">
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0">check_circle</span> 12 copies of WingsStarter included per set</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0">check_circle</span> Guarantees membership of 30 children in Junior Kings (hugely discounted)</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0">check_circle</span> In-house 5-aside First-to-Invent Challenge &amp; Inter-church IQ Championship</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-secondary text-sm shrink-0">check_circle</span> Weekend &amp; holiday activities tailored for faith communities</li>
+      </ul>
+    </div>
+    <div class="bg-gradient-to-r from-[#7a5500]/10 via-[#c9a227]/15 to-transparent p-3 rounded-lg border-l-4 border-[#c9a227] mb-4 text-xs italic text-on-surface">
+      "...And saviours shall come up on Mount Zion to govern the Mount of Esau, and the Kingdom will be the Lord's" — Obadiah 21
+    </div>
+    <div class="flex gap-3">
+      <button onclick="closeModal('churchModal');openModal('churchInquiry')" class="flex-1 bg-primary text-on-primary font-button-text text-sm h-11 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">
+        Inquire / Register Church
+      </button>
+      <button onclick="closeModal('churchModal');openModal('notifyModal')" class="flex-1 bg-secondary text-on-primary font-button-text text-sm h-11 rounded-lg btn-press transition-all">
+        Request Sponsor Pack
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CHURCH INQUIRY -->
+<div class="modal-overlay" id="churchInquiry" onclick="closeOut(event,'churchInquiry')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('churchInquiry')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-[#0d1b2e] rounded-xl flex items-center justify-center p-1.5 border border-[#c9a227]/40 shrink-0">
+        <img class="w-full h-full object-contain" src="./junior-kings-logo.jpg" alt="Junior Kings Logo">
+      </div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">Church Youth Programs Inquiry</div><div class="text-xs text-on-surface-variant">Junior Kings (Kings of the Marketplace)</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" placeholder="e.g. Dominion Chapel Youth Ministry / St. Paul's" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Pastor / Youth Leader *</label><input type="text" placeholder="e.g. Pastor Emmanuel" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. youth@church.org.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Youths (Under 17)</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding church scheduling, sponsorship or curriculum..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- CORPORATE MODAL -->
+<div class="modal-overlay" id="corporateModal" onclick="closeOut(event,'corporateModal')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('corporateModal')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-tertiary-container/50 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined fill-icon text-2xl text-tertiary">corporate_fare</span></div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">Corporate &amp; Leisure</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <p class="font-body-md text-body-md text-on-surface-variant mb-4">Engaging workshops and retreats designed for corporate teams and leisure groups. We bring the Firsts Academy methodology to adults, fostering innovation, teamwork, and continuous learning.</p>
+    <div class="bg-surface-container-low rounded-lg p-4 mb-4">
+      <h4 class="font-label-bold text-label-bold text-on-surface mb-3">What's Included:</h4>
+      <ul class="space-y-2 text-sm text-on-surface-variant">
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>Certified curriculum and instructor toolkits</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>On-site facilitation and teacher-training workshops</li>
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined fill-icon text-primary text-base">check_circle</span>Custom progress dashboard and patent ideation templates</li>
+      </ul>
+    </div>
+    <button onclick="closeModal('corporateModal');openModal('corpInquiry')" class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Inquire Now</button>
+  </div>
+</div>
+
+<!-- CORPORATE INQUIRY -->
+<div class="modal-overlay" id="corpInquiry" onclick="closeOut(event,'corpInquiry')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('corpInquiry')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-tertiary-container/50 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined fill-icon text-2xl text-tertiary">corporate_fare</span></div>
+      <div><div class="font-headline-md text-headline-md text-on-surface">Corporate &amp; Leisure Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- JUNIOR KINGS SPONSORSHIP / REGISTRATION MODAL -->
+<div class="modal-overlay" id="notifyModal" onclick="closeOut(event,'notifyModal')">
+  <div class="modal-box">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" onclick="closeModal('notifyModal')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-[#0d1b2e] rounded-xl flex items-center justify-center p-1.5 border border-[#c9a227]/40 shrink-0">
+        <img class="w-full h-full object-contain" src="./junior-kings-logo.jpg" alt="Junior Kings Logo">
+      </div>
+      <div>
+        <div class="font-headline-md text-headline-md text-on-surface">Junior Kings Church Registration</div>
+        <div class="text-xs font-label-bold text-secondary">Kings of the Marketplace — Youth Churches</div>
+      </div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+    <p class="font-body-md text-body-md text-on-surface-variant mb-4">Request a Junior Kings sponsorship pack or register your youth church ministry.</p>
+    <div class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Full Name *</label><input type="text" placeholder="e.g. Pastor Emmanuel Obi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone / WhatsApp *</label><input type="tel" placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" placeholder="e.g. Dominion Chapel Youth Ministry" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Number of Church Youths (Under 17)</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
+      <button class="w-full font-button-text text-button-text h-12 rounded-lg btn-press transition-all" style="background:#c9a227;color:white;">Submit Registration Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CART DRAWER & OVERLAY
+════════════════════════════════════════ -->
+<!-- Cart Backdrop -->
+<div id="cartBackdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[250] opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeCart()"></div>
+
+<!-- Cart Drawer -->
+<aside id="cartDrawer" class="fixed top-0 right-0 h-full w-full sm:w-[460px] bg-white z-[260] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col" aria-label="Shopping Cart Drawer">
+  <!-- Header -->
+  <div class="p-6 border-b border-outline-variant/30 flex items-center justify-between bg-surface-bright">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+      </div>
+      <div>
+        <h2 class="font-headline-md text-xl text-on-surface">Your Cart</h2>
+        <p class="text-xs text-on-surface-variant"><span id="cartDrawerCount">0</span> items in your cart</p>
+      </div>
+    </div>
+    <button onclick="closeCart()" class="p-2 text-on-surface-variant hover:text-on-surface rounded-full hover:bg-surface-container transition-colors cursor-pointer" aria-label="Close Cart">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+  </div>
+
+  <!-- Cart Items List / Empty State -->
+  <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+    <!-- Populated via JavaScript -->
+  </div>
+
+  <!-- Cart Footer / Summary -->
+  <div id="cartFooter" class="p-6 border-t border-outline-variant/30 bg-surface-bright space-y-4">
+    <div class="space-y-2">
+      <div class="flex items-center justify-between text-sm text-on-surface-variant">
+        <span>Items Subtotal</span>
+        <span id="cartSubtotal" class="font-bold text-on-surface text-lg">₦0</span>
+      </div>
+      <div class="flex items-center justify-between text-xs text-on-surface-variant">
+        <span>Delivery &amp; Logistics</span>
+        <span class="text-secondary font-semibold">Calculated at Checkout</span>
+      </div>
+      <div class="pt-2 border-t border-outline-variant/20 flex items-center justify-between">
+        <span class="font-headline-md text-base text-on-surface">Total Amount</span>
+        <span id="cartTotal" class="font-headline-lg text-2xl font-extrabold text-primary">₦0</span>
+      </div>
+    </div>
+
+    <button onclick="openCheckout()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text py-3.5 px-6 rounded-xl shadow-level-1 hover:shadow-level-2 btn-press transition-all duration-150 border-b-2 border-on-primary-fixed-variant flex items-center justify-center gap-2 cursor-pointer">
+      <span>Proceed to Checkout</span>
+      <span class="material-symbols-outlined text-xl">arrow_forward</span>
+    </button>
+
+    <div class="flex items-center justify-between text-xs pt-1">
+      <button onclick="clearCart()" class="text-on-surface-variant hover:text-error transition-colors cursor-pointer flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">delete_sweep</span> Clear Cart
+      </button>
+      <button onclick="closeCart();nav('products')" class="text-secondary hover:underline transition-colors cursor-pointer flex items-center gap-1 font-semibold">
+        Continue Shopping <span class="material-symbols-outlined text-sm">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal" onclick="closeOut(event,'checkoutModal')">
+  <div class="modal-box max-w-lg">
+    <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors cursor-pointer" onclick="closeModal('checkoutModal')">✕</button>
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">receipt_long</span>
+      </div>
+      <div>
+        <div class="font-headline-md text-headline-md text-on-surface">Order Checkout</div>
+        <div class="text-xs text-on-surface-variant">Review your kits &amp; complete your order</div>
+      </div>
+    </div>
+    <div class="h-px bg-outline-variant/30 my-4"></div>
+
+    <!-- Order Summary in Modal -->
+    <div class="bg-surface-container-low rounded-xl p-4 mb-4">
+      <div class="text-xs font-label-bold text-on-surface uppercase tracking-wider mb-2">Order Items:</div>
+      <div id="checkoutItemsList" class="space-y-2 max-h-40 overflow-y-auto pr-1 text-xs"></div>
+      <div class="pt-3 mt-3 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-bold text-sm text-on-surface">Total Payable:</span>
+        <span id="checkoutTotal" class="font-headline-md text-lg text-primary font-bold">₦0</span>
+      </div>
+    </div>
+
+    <!-- Contact details form -->
+    <form class="flex flex-col gap-3" onsubmit="submitOrder(event)">
+      <div>
+        <label class="font-label-bold text-xs text-on-surface-variant block mb-1">Parent / Purchaser Name *</label>
+        <input id="checkoutName" required type="text" placeholder="e.g. Mrs. Funke Adeleke" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="font-label-bold text-xs text-on-surface-variant block mb-1">Phone / WhatsApp *</label>
+          <input id="checkoutPhone" required type="tel" placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+        </div>
+        <div>
+          <label class="font-label-bold text-xs text-on-surface-variant block mb-1">Email Address</label>
+          <input id="checkoutEmail" type="email" placeholder="e.g. parent@gmail.com" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+        </div>
+      </div>
+      <div>
+        <label class="font-label-bold text-xs text-on-surface-variant block mb-1">Delivery Address (State / City / School) *</label>
+        <textarea id="checkoutAddress" required placeholder="Enter delivery location or school pickup preference..." rows="2" class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
+      </div>
+
+      <div class="bg-secondary-container/20 rounded-lg p-3 text-xs text-on-secondary-container flex items-center gap-2 border border-secondary-fixed/40">
+        <span class="material-symbols-outlined fill-icon text-secondary text-base">verified</span>
+        <span>Payment via Official FCMB Academy Account or WhatsApp Direct Dispatch.</span>
+      </div>
+
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1 flex items-center justify-center gap-2 cursor-pointer">
+        <span class="material-symbols-outlined text-lg">check_circle</span>
+        Confirm Order via WhatsApp / Transfer
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Toast notification for adding to cart -->
+<div id="cartToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[300] bg-on-surface text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
+  <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+  <span id="cartToastMsg" class="text-sm font-medium">Added to cart</span>
+  <button onclick="openCart()" class="text-xs text-secondary-fixed hover:underline font-bold ml-2 cursor-pointer">View Cart</button>
+</div>
+
+<script>
+  // Navigation
+  function nav(page) {
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.classList.remove('text-primary','border-b-2','border-primary','pb-1');
+      a.classList.add('text-on-surface');
+    });
+    const activeLink = document.getElementById('nav-' + page);
+    if (activeLink) {
+      activeLink.classList.remove('text-on-surface');
+      activeLink.classList.add('text-primary','border-b-2','border-primary','pb-1');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+    document.getElementById('mobileMenu').classList.toggle('flex');
+  }
+
+  // Modals
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeOut(e, id) { if (e.target.id === id) closeModal(id); }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
+      closeCart();
+    }
+  });
+
+  // Nav shadow on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav-header');
+    if (window.scrollY > 10) nav.classList.add('shadow-level-1');
+    else nav.classList.remove('shadow-level-1');
+  });
+
+  // ═══════════════════════════════════════
+  // GLOBAL SHOPPING CART STATE & LOGIC
+  // ═══════════════════════════════════════
+  const PRODUCTS = {
+    'kingstarter': {
+      id: 'kingstarter',
+      name: 'Kingstarter Card Game Kit',
+      price: 15000,
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMenFUFpTdWUhOLSQhaXtIUzO-0sTK0wiyPOvA_KsW78Je8oV7bgGoMdimcZeKLxcR6s30REMNBtlOtsC8_9eX_JgJRazknkrUv34C8QVS8MGtloEp6fuIbFJC74BQhIqGJDzOAs0ttoSlnVRhpADCT4Om8atDUo-buosKnyRwfNgqs05hIG3Xmh5N_SjZ58FEESmLoyawcaIHZjNgy5KzcOkC7Bhu4KzYI5GCmoa0fBMYzlGBR8uo'
+    },
+    'jjc-jacket': {
+      id: 'jjc-jacket',
+      name: 'JJC Membership Jacket',
+      price: 25000,
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAdPssg4aaFKF6QUDsrz69hiQS3a00vW4nE_H-ifnhkRkpMhIR-rpTLl60jibeOvlIrk1aAh4QjAO3H5nPe7qZPLZwXkU-VXnMCSB-QjWXASQrV-iB3gnC6KigIm32pVxOQV4pb3RiaBXzyQXwpoq9dYcKp4Wdo3nvgypCLZE3iTUpe7qcbe7sjPhVn6pnAlH1beRfUshahqweX6VXO1sWfYkcpV68dCG9tV3y84m6mjE7bhjW1Hzg4'
+    },
+    'wingsstarter-kit': {
+      id: 'wingsstarter-kit',
+      name: 'Junior Eagles / WingsStarter Kit',
+      price: 40000,
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAncDf_gYcxfeqV3Gs6ZbDOK8Lolr0X4S49sP1Ie8d0qZR1b_HZaXbcgbbEMiOmXdtbLE2ra31YkNfebsP9XBN1MVDuKsMMLN4y08qcHiPQN25eQm2Fo_1JsLvDrmCowiO4SU5EsPJqUnRza6T6c80XEh0Bkv7ikKCLH4fchqMXEAbbHNhdbN0AjXX0ApJZ0RSjXI4FpqLloGzWKyPmn27xBaJm97fYRakw8cTpRCEbmdXx1eJDDmsJ'
+    }
+  };
+
+  let cart = [];
+  try {
+    const saved = localStorage.getItem('firsts_academy_cart');
+    if (saved) cart = JSON.parse(saved);
+  } catch (e) {
+    cart = [];
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem('firsts_academy_cart', JSON.stringify(cart));
+    } catch (e) {}
+    renderCart();
+  }
+
+  function formatMoney(amount) {
+    return '₦' + Number(amount).toLocaleString();
+  }
+
+  function getCartTotals() {
+    let totalCount = 0;
+    let subtotal = 0;
+    cart.forEach(item => {
+      totalCount += item.quantity;
+      subtotal += item.price * item.quantity;
+    });
+    return { totalCount, subtotal };
+  }
+
+  function addToCart(productId) {
+    const product = PRODUCTS[productId];
+    if (!product) return;
+    const existing = cart.find(item => item.id === productId);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        quantity: 1
+      });
+    }
+    saveCart();
+    showToast(`Added ${product.name} to cart!`);
+    openCart();
+  }
+
+  function updateQuantity(productId, delta) {
+    const item = cart.find(i => i.id === productId);
+    if (!item) return;
+    item.quantity += delta;
+    if (item.quantity <= 0) {
+      cart = cart.filter(i => i.id !== productId);
+    }
+    saveCart();
+  }
+
+  function removeFromCart(productId) {
+    cart = cart.filter(i => i.id !== productId);
+    saveCart();
+    showToast('Item removed from cart');
+  }
+
+  function clearCart() {
+    if (!cart.length) return;
+    cart = [];
+    saveCart();
+    showToast('Cart cleared');
+  }
+
+  function openCart() {
+    const drawer = document.getElementById('cartDrawer');
+    const backdrop = document.getElementById('cartBackdrop');
+    if (drawer && backdrop) {
+      drawer.classList.remove('translate-x-full');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeCart() {
+    const drawer = document.getElementById('cartDrawer');
+    const backdrop = document.getElementById('cartBackdrop');
+    if (drawer && backdrop) {
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      backdrop.classList.remove('opacity-100');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('cartToast');
+    const toastMsg = document.getElementById('cartToastMsg');
+    if (toast && toastMsg) {
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+  }
+
+  function renderCart() {
+    const { totalCount, subtotal } = getCartTotals();
+
+    // Badges in navbar
+    const badge = document.getElementById('cartBadge');
+    if (badge) {
+      badge.textContent = totalCount;
+      if (totalCount > 0) {
+        badge.classList.remove('hidden');
+        badge.classList.add('flex');
+      } else {
+        badge.classList.add('hidden');
+        badge.classList.remove('flex');
+      }
+    }
+
+    const countHeader = document.getElementById('cartDrawerCount');
+    if (countHeader) countHeader.textContent = totalCount;
+
+    const subtotalEl = document.getElementById('cartSubtotal');
+    if (subtotalEl) subtotalEl.textContent = formatMoney(subtotal);
+
+    const totalEl = document.getElementById('cartTotal');
+    if (totalEl) totalEl.textContent = formatMoney(subtotal);
+
+    const container = document.getElementById('cartItemsContainer');
+    const footer = document.getElementById('cartFooter');
+
+    if (!container) return;
+
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <div class="h-full flex flex-col items-center justify-center text-center p-8 text-on-surface-variant">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-4 text-outline">
+            <span class="material-symbols-outlined text-4xl">remove_shopping_cart</span>
+          </div>
+          <h3 class="font-headline-md text-lg text-on-surface mb-2">Your Cart is Empty</h3>
+          <p class="text-xs text-on-surface-variant max-w-xs mb-6">Explore our official FIRSTS ACADEMY kits, games, and gear to equip your young pioneer.</p>
+          <button onclick="closeCart();nav('products')" class="bg-primary text-on-primary font-button-text text-sm py-2.5 px-6 rounded-lg shadow-level-1 hover:shadow-level-2 btn-press transition-all cursor-pointer">
+            Browse Academy Shop
+          </button>
+        </div>
+      `;
+      if (footer) footer.classList.add('opacity-50', 'pointer-events-none');
+    } else {
+      if (footer) footer.classList.remove('opacity-50', 'pointer-events-none');
+      container.innerHTML = cart.map(item => `
+        <div class="bg-surface-bright p-4 rounded-xl border border-outline-variant/30 flex gap-4 items-center shadow-sm">
+          <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg bg-surface-container shrink-0 border border-outline-variant/20">
+          <div class="flex-1 min-w-0">
+            <h4 class="font-label-bold text-sm text-on-surface truncate">${item.name}</h4>
+            <div class="text-xs text-primary font-bold mt-0.5">${formatMoney(item.price)} each</div>
+            <div class="flex items-center justify-between mt-2">
+              <div class="inline-flex items-center border border-outline-variant/50 rounded-lg bg-white overflow-hidden shadow-inner-press">
+                <button onclick="updateQuantity('${item.id}', -1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors cursor-pointer font-bold text-sm" aria-label="Decrease quantity">−</button>
+                <span class="w-8 text-center text-xs font-bold text-on-surface">${item.quantity}</span>
+                <button onclick="updateQuantity('${item.id}', 1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors cursor-pointer font-bold text-sm" aria-label="Increase quantity">+</button>
+              </div>
+              <div class="text-xs font-headline-md font-bold text-on-surface">
+                ${formatMoney(item.price * item.quantity)}
+              </div>
+            </div>
+          </div>
+          <button onclick="removeFromCart('${item.id}')" class="p-2 text-outline hover:text-error transition-colors rounded-full hover:bg-error-container/20 cursor-pointer shrink-0" title="Remove Item" aria-label="Remove ${item.name}">
+            <span class="material-symbols-outlined text-lg">delete</span>
+          </button>
+        </div>
+      `).join('');
+    }
+  }
+
+  function openCheckout() {
+    if (!cart.length) return;
+    closeCart();
+    const list = document.getElementById('checkoutItemsList');
+    const total = document.getElementById('checkoutTotal');
+    const { subtotal } = getCartTotals();
+    if (list) {
+      list.innerHTML = cart.map(item => `
+        <div class="flex justify-between items-center py-1.5 border-b border-outline-variant/10">
+          <span class="font-medium text-on-surface">${item.name} <span class="text-on-surface-variant font-normal">× ${item.quantity}</span></span>
+          <span class="font-bold text-primary">${formatMoney(item.price * item.quantity)}</span>
+        </div>
+      `).join('');
+    }
+    if (total) total.textContent = formatMoney(subtotal);
+    openModal('checkoutModal');
+  }
+
+  function submitOrder(e) {
+    e.preventDefault();
+    const name = document.getElementById('checkoutName').value;
+    const phone = document.getElementById('checkoutPhone').value;
+    const email = document.getElementById('checkoutEmail').value;
+    const address = document.getElementById('checkoutAddress').value;
+    const { subtotal } = getCartTotals();
+
+    let itemsSummary = cart.map(i => `• ${i.name} (Qty: ${i.quantity}) - ${formatMoney(i.price * i.quantity)}`).join('\n');
+    let message = `Hello FIRSTS ACADEMY! I want to order:\n\n${itemsSummary}\n\n*Total Payable:* ${formatMoney(subtotal)}\n\n*Buyer Details:*\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nDelivery: ${address}`;
+
+    const waUrl = `https://wa.me/23407054109840?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, '_blank');
+    closeModal('checkoutModal');
+    clearCart();
+    alert('Thank you! Your order summary has been prepared and opened in WhatsApp.');
+  }
+
+  // Initialize cart on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+  });
+  renderCart();
+</script>
+</body>
+</html>
