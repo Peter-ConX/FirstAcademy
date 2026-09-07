@@ -1,0 +1,13 @@
+{
+  "name": "firsts-academy",
+  "version": "1.0.0",
+  "description": "FIRSTS ACADEMY - Africa's Premier Under 17s Pioneering Education Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "lucide": "^0.475.0",
+    "lucide-react": "^0.475.0"
+  }
+}
