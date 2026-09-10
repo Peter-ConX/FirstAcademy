@@ -1922,17 +1922,28 @@
 
   // Modals
   function openModal(id) {
-    document.getElementById(id).classList.add('open');
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
   function closeModal(id) {
-    document.getElementById(id).classList.remove('open');
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.remove('open');
     document.body.style.overflow = '';
+    const box = modal.querySelector('.modal-box');
+    if (box && box._originalHTML) {
+      setTimeout(() => {
+        box.innerHTML = box._originalHTML;
+        delete box._originalHTML;
+      }, 300);
+    }
   }
   function closeOut(e, id) { if (e.target.id === id) closeModal(id); }
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
+      document.querySelectorAll('.modal-overlay.open').forEach(m => { closeModal(m.id); });
       closeCart();
     }
   });
@@ -2185,11 +2196,14 @@
     let itemsSummary = cart.map(i => `• ${i.name} (Qty: ${i.quantity}) - ${formatMoney(i.price * i.quantity)}`).join('\n');
     let message = `Hello FIRSTS ACADEMY! I want to order:\n\n${itemsSummary}\n\n*Total Payable:* ${formatMoney(subtotal)}\n\n*Buyer Details:*\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nDelivery: ${address}`;
 
-    const waUrl = `https://wa.me/23407054109840?text=${encodeURIComponent(message)}`;
-    window.open(waUrl, '_blank');
-    closeModal('checkoutModal');
-    clearCart();
-    alert('Thank you! Your order summary has been prepared and opened in WhatsApp.');
+    saveInquiry('order_checkout', { name, phone, email, address, items: cart, total: subtotal });
+    showModalSuccess(
+      'checkoutModal',
+      'Order Summary Prepared!',
+      `Thank you, <strong>${name}</strong>! Your order total is <strong>${formatMoney(subtotal)}</strong>. Click below to continue directly to WhatsApp to confirm delivery and payment transfer.`,
+      message,
+      () => clearCart()
+    );
   }
 
   const WA_NUMBER = '23407054109840';
@@ -2206,6 +2220,62 @@
       localStorage.setItem('firsts_academy_inquiries', JSON.stringify(list));
     } catch (e) {
       console.warn('LocalStorage save failed:', e);
+    }
+  }
+
+  function showModalSuccess(modalId, title, desc, waText, onDone) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    const box = modal.querySelector('.modal-box');
+    if (!box) return;
+
+    if (!box._originalHTML) {
+      box._originalHTML = box.innerHTML;
+    }
+
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waText)}`;
+
+    box.innerHTML = `
+      <div class="py-6 px-4 text-center flex flex-col items-center">
+        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 shadow-sm animate-pulse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">${title || 'Request Received!'}</h3>
+        <p class="text-sm text-on-surface-variant max-w-md mx-auto mb-6 leading-relaxed">
+          ${desc || 'Thank you! Your information has been submitted. Click below to continue directly to WhatsApp to complete your request.'}
+        </p>
+
+        <div class="w-full max-w-sm space-y-3">
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3.5 px-6 rounded-lg text-sm shadow-md transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766m9.969 5.766c0 5.518-4.482 10-10 10-1.72 0-3.33-.44-4.74-1.21L2 22l1.49-5.14C2.69 15.42 2 13.79 2 11.938 2 6.42 6.482 1.938 12 1.938c5.518 0 10 4.482 10 10z"/>
+            </svg>
+            Continue to WhatsApp Chat
+          </a>
+
+          <button type="button" onclick="closeModal('${modalId}')" class="w-full bg-surface-container hover:bg-surface-container-high text-on-surface font-medium py-2.5 px-4 rounded-lg text-xs transition-colors cursor-pointer">
+            Close Window
+          </button>
+        </div>
+      </div>
+    `;
+
+    try {
+      window.open(waUrl, '_blank');
+    } catch (err) {
+      console.warn('Popup blocked:', err);
+    }
+    showToast('Success! Request recorded.', false);
+    if (typeof onDone === 'function') onDone();
+  }
+
+  function resetContactForm(btn) {
+    const container = btn.closest('.bg-surface-container-lowest');
+    if (container && container._originalHTML) {
+      container.innerHTML = container._originalHTML;
+      delete container._originalHTML;
     }
   }
 
@@ -2229,11 +2299,12 @@
     if (notes) msg += `• *Objectives / Timeline:* ${notes}\n`;
 
     saveInquiry('church_inquiry', { churchName, leader, phone, email, youths, notes });
-    openWhatsApp(msg);
-    closeModal('churchInquiry');
-    f.reset();
-    showToast('Partnership request submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your partnership request for Junior Kings has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'churchInquiry',
+      'Partnership Request Received!',
+      `Thank you, <strong>${leader || 'Pastor'}</strong>. Your inquiry for <strong>${churchName || 'your church'}</strong> has been submitted. Click below to continue directly to WhatsApp to finalize your youth program setup.`,
+      msg
+    );
   }
 
   // 2. Student Enrollment Form (enrollModal)
@@ -2253,11 +2324,12 @@
     msg += `• *Program Track:* ${track}\n`;
 
     saveInquiry('enrollment', { parentName, phone, childName, childAge, track });
-    openWhatsApp(msg);
-    closeModal('enrollModal');
-    f.reset();
-    showToast('Enrollment submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your enrollment request has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'enrollModal',
+      'Enrollment Request Received!',
+      `Thank you, <strong>${parentName || 'Parent'}</strong>. We have received the enrollment request for <strong>${childName || 'your cadet'}</strong>. Click below to chat with admissions on WhatsApp right away.`,
+      msg
+    );
   }
 
   // 3. School Partnerships Inquiry (schoolInquiry)
@@ -2280,11 +2352,12 @@
     if (notes) msg += `• *Objectives:* ${notes}\n`;
 
     saveInquiry('school_inquiry', { orgName, contactPerson, phone, email, studentCount, notes });
-    openWhatsApp(msg);
-    closeModal('schoolInquiry');
-    f.reset();
-    showToast('Partnership request submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your school partnership request has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'schoolInquiry',
+      'School Partnership Request Received!',
+      `Thank you, <strong>${contactPerson || 'Educator'}</strong>. Your inquiry for <strong>${orgName || 'your school'}</strong> has been submitted. Click below to continue directly to WhatsApp to speak with our partnerships director.`,
+      msg
+    );
   }
 
   // 4. WingsStarter Product Inquiry (wingstarter)
@@ -2307,11 +2380,12 @@
     if (notes) msg += `• *Notes:* ${notes}\n`;
 
     saveInquiry('wingstarter_inquiry', { orgName, contactPerson, phone, email, studentCount, notes });
-    openWhatsApp(msg);
-    closeModal('wingstarter');
-    f.reset();
-    showToast('Inquiry submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your WingsStarter inquiry has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'wingstarter',
+      'WingsStarter Inquiry Received!',
+      `Thank you, <strong>${contactPerson || 'there'}</strong>. Your request regarding WingsStarter for <strong>${orgName || 'your institution'}</strong> has been received. Click below to chat with us on WhatsApp.`,
+      msg
+    );
   }
 
   // 5. Corporate & Leisure Inquiry (corpInquiry)
@@ -2334,11 +2408,12 @@
     if (notes) msg += `• *Objectives:* ${notes}\n`;
 
     saveInquiry('corporate_inquiry', { orgName, contactPerson, phone, email, headcount, notes });
-    openWhatsApp(msg);
-    closeModal('corpInquiry');
-    f.reset();
-    showToast('Inquiry submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your corporate inquiry has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'corpInquiry',
+      'Corporate Inquiry Received!',
+      `Thank you, <strong>${contactPerson || 'there'}</strong>. We have received your inquiry for <strong>${orgName || 'your organization'}</strong>. Click below to connect with our corporate programs team on WhatsApp.`,
+      msg
+    );
   }
 
   // 6. Junior Kings Church Registration (notifyModal)
@@ -2357,11 +2432,12 @@
     msg += `• *Number of Church Youths:* ${youths}\n`;
 
     saveInquiry('junior_kings_registration', { fullName, phone, churchName, youths });
-    openWhatsApp(msg);
-    closeModal('notifyModal');
-    f.reset();
-    showToast('Registration submitted! Opening WhatsApp...', false);
-    alert('Thank you! Your Junior Kings registration has been prepared and opened in WhatsApp.');
+    showModalSuccess(
+      'notifyModal',
+      'Junior Kings Registration Received!',
+      `Thank you, <strong>${fullName || 'Leader'}</strong>! Your registration for <strong>${churchName || 'your church'}</strong> is recorded. Click below to finalize with us on WhatsApp.`,
+      msg
+    );
   }
 
   // 7. Contact Page Message (handleContactSubmit)
@@ -2382,10 +2458,38 @@
     msg += `• *Message:* ${message}\n`;
 
     saveInquiry('contact_message', { fullName, email, phone, school, message });
-    openWhatsApp(msg);
-    f.reset();
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    try { window.open(waUrl, '_blank'); } catch (err) {}
+
+    const container = f.closest('.bg-surface-container-lowest') || f.parentElement;
+    if (container) {
+      if (!container._originalHTML) container._originalHTML = container.innerHTML;
+      container.innerHTML = `
+        <div class="py-8 px-4 text-center flex flex-col items-center">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 shadow-sm animate-pulse">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Message Sent Successfully!</h3>
+          <p class="text-sm text-on-surface-variant max-w-md mx-auto mb-6 leading-relaxed">
+            Thank you, <strong>${fullName || 'there'}</strong>! Your message has been prepared. Click below to continue directly to WhatsApp to speak with our admissions officer right now.
+          </p>
+          <div class="w-full max-w-sm space-y-3">
+            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3.5 px-6 rounded-lg text-sm shadow-md transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766m9.969 5.766c0 5.518-4.482 10-10 10-1.72 0-3.33-.44-4.74-1.21L2 22l1.49-5.14C2.69 15.42 2 13.79 2 11.938 2 6.42 6.482 1.938 12 1.938c5.518 0 10 4.482 10 10z"/>
+              </svg>
+              Chat on WhatsApp Now
+            </a>
+            <button type="button" onclick="resetContactForm(this)" class="w-full bg-surface-container hover:bg-surface-container-high text-on-surface font-medium py-2.5 px-4 rounded-lg text-xs transition-colors cursor-pointer">
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      `;
+    }
     showToast('Message sent! Opening WhatsApp chat...', false);
-    alert('Thank you! Your message has been prepared and opened in WhatsApp.');
   }
 
   // Initialize cart on page load
