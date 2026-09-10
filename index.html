@@ -1409,30 +1409,30 @@
       <!-- Form -->
       <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-level-1 hover:shadow-level-2 hover:border-primary transition-all duration-300">
         <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Send a Message</h2>
-        <form class="flex flex-col gap-stack-sm" onsubmit="return false;">
+        <form class="flex flex-col gap-stack-sm" onsubmit="handleContactSubmit(event)">
           <div>
-            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Full Name</label>
-            <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Enter parent's or child's name" type="text">
+            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Full Name *</label>
+            <input name="fullName" required class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Enter parent's or child's name" type="text">
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Email Address</label>
-              <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="your@email.com" type="email">
+              <input name="email" class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="your@email.com" type="email">
             </div>
             <div>
-              <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Phone Number</label>
-              <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="e.g., 0808 782 8554" type="tel">
+              <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Phone Number *</label>
+              <input name="phone" required class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="e.g., 0808 782 8554" type="tel">
             </div>
           </div>
           <div>
             <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Current School (Optional)</label>
-            <input class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Where does your child currently study?" type="text">
+            <input name="school" class="w-full h-12 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Where does your child currently study?" type="text">
           </div>
           <div>
-            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Your Message</label>
-            <textarea class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md resize-none" placeholder="How can we help you today?" rows="4"></textarea>
+            <label class="font-label-bold text-label-bold text-on-surface-variant block mb-2">Your Message *</label>
+            <textarea name="message" required class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md resize-none" placeholder="How can we help you today?" rows="4"></textarea>
           </div>
-          <button type="submit" class="mt-4 w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg shadow-level-1 hover:shadow-level-2 border-b-2 border-on-primary-fixed-variant btn-press transition-all duration-200 flex justify-center items-center gap-2">
+          <button type="submit" class="mt-4 w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg shadow-level-1 hover:shadow-level-2 border-b-2 border-on-primary-fixed-variant btn-press transition-all duration-200 flex justify-center items-center gap-2 cursor-pointer">
             Submit Registration <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send text-sm"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg>
           </button>
         </form>
@@ -1534,15 +1534,15 @@
       </div>
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Parent / Guardian Name *</label><input type="text" placeholder="e.g. Dr. Ngozi Okafor" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number (WhatsApp preferred) *</label><input type="tel" placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+    <form onsubmit="handleEnrollSubmit(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Parent / Guardian Name *</label><input type="text" name="parentName" required placeholder="e.g. Dr. Ngozi Okafor" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number (WhatsApp preferred) *</label><input type="tel" name="parentPhone" required placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
       <div class="grid grid-cols-2 gap-3">
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Name *</label><input type="text" placeholder="e.g. Ebube" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Age (5–17) *</label><input type="number" placeholder="10" min="5" max="17" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Name *</label><input type="text" name="childName" required placeholder="e.g. Ebube" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Child's Age (5–17) *</label><input type="number" name="childAge" required placeholder="10" min="5" max="17" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></div>
       </div>
       <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Program Track *</label>
-        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
+        <select name="programTrack" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
           <option>JJC Nigeria (Junior Job Creators - Public Schools)</option>
           <option>Junior Eagles Nigeria (Private Schools &amp; Parents)</option>
           <option>Junior Kings (Kings of the Marketplace — Youth Churches)</option>
@@ -1552,8 +1552,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check fill-icon text-secondary text-base"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg>
         Backed by FIRSTS ACADEMY Original Brainchild Performance Guarantee.
       </div>
-      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1">Complete Enrollment</button>
-    </div>
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all shadow-level-1 cursor-pointer">Complete Enrollment</button>
+    </form>
   </div>
 </div>
 
@@ -1588,19 +1588,19 @@
       <div><div class="font-headline-md text-headline-md text-on-surface">School Partnerships Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+    <form onsubmit="handleSchoolInquiry(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" name="orgName" required placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div class="grid grid-cols-2 gap-3">
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" name="contactPerson" required placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" name="phone" required placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" name="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label>
-        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
+        <select name="studentCount" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
-      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
-    </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea name="notes" placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all cursor-pointer">Submit Partnership Request</button>
+    </form>
   </div>
 </div>
 
@@ -1613,19 +1613,19 @@
       <div><div class="font-headline-md text-headline-md text-on-surface">WingsStarter Product Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+    <form onsubmit="handleWingstarterInquiry(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" name="orgName" required placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div class="grid grid-cols-2 gap-3">
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" name="contactPerson" required placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" name="phone" required placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" name="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label>
-        <select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
+        <select name="studentCount" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
-      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
-    </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea name="notes" placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all cursor-pointer">Submit Partnership Request</button>
+    </form>
   </div>
 </div>
 
@@ -1687,17 +1687,17 @@
       <div><div class="font-headline-md text-headline-md text-on-surface">Church Youth Programs Inquiry</div><div class="text-xs text-on-surface-variant">Junior Kings (Kings of the Marketplace)</div></div>
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" placeholder="e.g. Dominion Chapel Youth Ministry / St. Paul's" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+    <form onsubmit="handleChurchInquiry(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" name="churchName" required placeholder="e.g. Dominion Chapel Youth Ministry / St. Paul's" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div class="grid grid-cols-2 gap-3">
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Pastor / Youth Leader *</label><input type="text" placeholder="e.g. Pastor Emmanuel" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Pastor / Youth Leader *</label><input type="text" name="churchLeader" required placeholder="e.g. Pastor Emmanuel" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" name="churchPhone" required placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. youth@church.org.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Youths</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding church scheduling, sponsorship or curriculum..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
-      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
-    </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" name="churchEmail" placeholder="e.g. youth@church.org.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Youths</label><select name="churchYouths" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea name="churchNotes" placeholder="Share any questions regarding church scheduling, sponsorship or curriculum..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all cursor-pointer">Submit Partnership Request</button>
+    </form>
   </div>
 </div>
 
@@ -1732,17 +1732,17 @@
       <div><div class="font-headline-md text-headline-md text-on-surface">Corporate &amp; Leisure Inquiry</div><div class="text-sm text-on-surface-variant">Connect with our enterprise partnerships team.</div></div>
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+    <form onsubmit="handleCorpInquiry(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">School / Church / Company Name *</label><input type="text" name="orgName" required placeholder="e.g. Corona Schools Trust / St. Andrews / Sterling Corp" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       <div class="grid grid-cols-2 gap-3">
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Contact Person *</label><input type="text" name="contactPerson" required placeholder="e.g. Mrs. Adeyemi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+        <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone Number *</label><input type="tel" name="phone" required placeholder="e.g. 0802 000 0000" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
       </div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
-      <button class="w-full bg-primary text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all">Submit Partnership Request</button>
-    </div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Official Email Address</label><input type="email" name="email" placeholder="e.g. partnerships@school.edu.ng" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Estimated Number of Students / Cadets</label><select name="headcount" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>50 - 200 students</option><option>200 - 500 students</option><option>500 - 1000 students</option><option>1000+ students</option></select></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Specific Objectives / Timeline</label><textarea name="notes" placeholder="Share any questions regarding curriculum integration or scheduling..." class="w-full bg-surface-bright border border-outline-variant/50 rounded-lg p-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" rows="3"></textarea></div>
+      <button type="submit" class="w-full bg-primary hover:bg-primary-container text-on-primary font-button-text text-button-text h-12 rounded-lg border-b-2 border-on-primary-fixed-variant btn-press transition-all cursor-pointer">Submit Partnership Request</button>
+    </form>
   </div>
 </div>
 
@@ -1761,13 +1761,13 @@
     </div>
     <div class="h-px bg-outline-variant/30 my-4"></div>
     <p class="font-body-md text-body-md text-on-surface-variant mb-4">Request a Junior Kings sponsorship pack or register your youth church ministry.</p>
-    <div class="flex flex-col gap-3">
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Full Name *</label><input type="text" placeholder="e.g. Pastor Emmanuel Obi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone / WhatsApp *</label><input type="tel" placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" placeholder="e.g. Dominion Chapel Youth Ministry" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
-      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Number of Church Youths</label><select class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
-      <button class="w-full font-button-text text-button-text h-12 rounded-lg btn-press transition-all" style="background:#c9a227;color:white;">Submit Registration Request</button>
-    </div>
+    <form onsubmit="handleJuniorKingsRegister(event)" class="flex flex-col gap-3">
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Full Name *</label><input type="text" name="fullName" required placeholder="e.g. Pastor Emmanuel Obi" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Phone / WhatsApp *</label><input type="tel" name="phone" required placeholder="e.g. 0803 123 4567" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Church / Ministry Name *</label><input type="text" name="churchName" required placeholder="e.g. Dominion Chapel Youth Ministry" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"></div>
+      <div><label class="font-label-bold text-label-bold text-on-surface-variant block mb-1">Number of Church Youths</label><select name="youths" class="w-full h-11 bg-surface-bright border border-outline-variant/50 rounded-lg px-4 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"><option>30 youths (1 Set WingsStarter @ ₦100k)</option><option>60 youths (2 Sets WingsStarter @ ₦200k)</option><option>100+ youths (Custom Sponsorship)</option></select></div>
+      <button type="submit" class="w-full font-button-text text-button-text h-12 rounded-lg btn-press transition-all cursor-pointer" style="background:#c9a227;color:white;">Submit Registration Request</button>
+    </form>
   </div>
 </div>
 
@@ -1896,7 +1896,7 @@
 <div id="cartToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[300] bg-on-surface text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-secondary-fixed text-xl"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg>
   <span id="cartToastMsg" class="text-sm font-medium">Added to cart</span>
-  <button onclick="openCart()" class="text-xs text-secondary-fixed hover:underline font-bold ml-2 cursor-pointer">View Cart</button>
+  <button id="cartToastBtn" onclick="openCart()" class="text-xs text-secondary-fixed hover:underline font-bold ml-2 cursor-pointer">View Cart</button>
 </div>
 
 <script>
@@ -2013,7 +2013,7 @@
       });
     }
     saveCart();
-    showToast(`Added ${product.name} to cart!`);
+    showToast(`Added ${product.name} to cart!`, true);
     openCart();
   }
 
@@ -2062,18 +2062,26 @@
     }
   }
 
-  function showToast(msg) {
+  function showToast(msg, showCartBtn = false) {
     const toast = document.getElementById('cartToast');
     const toastMsg = document.getElementById('cartToastMsg');
+    const toastBtn = document.getElementById('cartToastBtn');
     if (toast && toastMsg) {
       toastMsg.textContent = msg;
+      if (toastBtn) {
+        if (showCartBtn) {
+          toastBtn.classList.remove('hidden');
+        } else {
+          toastBtn.classList.add('hidden');
+        }
+      }
       toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
       toast.classList.add('translate-y-0', 'opacity-100');
       clearTimeout(window.toastTimer);
       window.toastTimer = setTimeout(() => {
         toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
         toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 2500);
+      }, 3500);
     }
   }
 
@@ -2182,6 +2190,202 @@
     closeModal('checkoutModal');
     clearCart();
     alert('Thank you! Your order summary has been prepared and opened in WhatsApp.');
+  }
+
+  const WA_NUMBER = '23407054109840';
+
+  function openWhatsApp(text) {
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
+  }
+
+  function saveInquiry(type, data) {
+    try {
+      const list = JSON.parse(localStorage.getItem('firsts_academy_inquiries') || '[]');
+      list.push({ type, data, createdAt: new Date().toISOString() });
+      localStorage.setItem('firsts_academy_inquiries', JSON.stringify(list));
+    } catch (e) {
+      console.warn('LocalStorage save failed:', e);
+    }
+  }
+
+  // 1. Church Youth Programs Inquiry (Junior Kings)
+  function handleChurchInquiry(e) {
+    e.preventDefault();
+    const f = e.target;
+    const churchName = f.churchName ? f.churchName.value.trim() : '';
+    const leader = f.churchLeader ? f.churchLeader.value.trim() : '';
+    const phone = f.churchPhone ? f.churchPhone.value.trim() : '';
+    const email = f.churchEmail ? f.churchEmail.value.trim() : '';
+    const youths = f.churchYouths ? f.churchYouths.value : '';
+    const notes = f.churchNotes ? f.churchNotes.value.trim() : '';
+
+    let msg = `*FIRSTS ACADEMY — Church Youth Programs Inquiry (Junior Kings)*\n\n`;
+    msg += `• *Church / Ministry:* ${churchName}\n`;
+    msg += `• *Pastor / Youth Leader:* ${leader}\n`;
+    msg += `• *Phone / WhatsApp:* ${phone}\n`;
+    if (email) msg += `• *Email:* ${email}\n`;
+    msg += `• *Estimated Youths:* ${youths}\n`;
+    if (notes) msg += `• *Objectives / Timeline:* ${notes}\n`;
+
+    saveInquiry('church_inquiry', { churchName, leader, phone, email, youths, notes });
+    openWhatsApp(msg);
+    closeModal('churchInquiry');
+    f.reset();
+    showToast('Partnership request submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your partnership request for Junior Kings has been prepared and opened in WhatsApp.');
+  }
+
+  // 2. Student Enrollment Form (enrollModal)
+  function handleEnrollSubmit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const parentName = f.parentName ? f.parentName.value.trim() : '';
+    const phone = f.parentPhone ? f.parentPhone.value.trim() : '';
+    const childName = f.childName ? f.childName.value.trim() : '';
+    const childAge = f.childAge ? f.childAge.value.trim() : '';
+    const track = f.programTrack ? f.programTrack.value : '';
+
+    let msg = `*FIRSTS ACADEMY — Student Enrollment Request*\n\n`;
+    msg += `• *Parent / Guardian:* ${parentName}\n`;
+    msg += `• *Phone / WhatsApp:* ${phone}\n`;
+    msg += `• *Child Name:* ${childName} (Age: ${childAge})\n`;
+    msg += `• *Program Track:* ${track}\n`;
+
+    saveInquiry('enrollment', { parentName, phone, childName, childAge, track });
+    openWhatsApp(msg);
+    closeModal('enrollModal');
+    f.reset();
+    showToast('Enrollment submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your enrollment request has been prepared and opened in WhatsApp.');
+  }
+
+  // 3. School Partnerships Inquiry (schoolInquiry)
+  function handleSchoolInquiry(e) {
+    e.preventDefault();
+    const f = e.target;
+    const orgName = f.orgName ? f.orgName.value.trim() : '';
+    const contactPerson = f.contactPerson ? f.contactPerson.value.trim() : '';
+    const phone = f.phone ? f.phone.value.trim() : '';
+    const email = f.email ? f.email.value.trim() : '';
+    const studentCount = f.studentCount ? f.studentCount.value : '';
+    const notes = f.notes ? f.notes.value.trim() : '';
+
+    let msg = `*FIRSTS ACADEMY — School Partnerships Inquiry*\n\n`;
+    msg += `• *School / Institution:* ${orgName}\n`;
+    msg += `• *Contact Person:* ${contactPerson}\n`;
+    msg += `• *Phone:* ${phone}\n`;
+    if (email) msg += `• *Email:* ${email}\n`;
+    msg += `• *Estimated Students/Cadets:* ${studentCount}\n`;
+    if (notes) msg += `• *Objectives:* ${notes}\n`;
+
+    saveInquiry('school_inquiry', { orgName, contactPerson, phone, email, studentCount, notes });
+    openWhatsApp(msg);
+    closeModal('schoolInquiry');
+    f.reset();
+    showToast('Partnership request submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your school partnership request has been prepared and opened in WhatsApp.');
+  }
+
+  // 4. WingsStarter Product Inquiry (wingstarter)
+  function handleWingstarterInquiry(e) {
+    e.preventDefault();
+    const f = e.target;
+    const orgName = f.orgName ? f.orgName.value.trim() : '';
+    const contactPerson = f.contactPerson ? f.contactPerson.value.trim() : '';
+    const phone = f.phone ? f.phone.value.trim() : '';
+    const email = f.email ? f.email.value.trim() : '';
+    const studentCount = f.studentCount ? f.studentCount.value : '';
+    const notes = f.notes ? f.notes.value.trim() : '';
+
+    let msg = `*FIRSTS ACADEMY — WingsStarter Product Inquiry*\n\n`;
+    msg += `• *Organization:* ${orgName}\n`;
+    msg += `• *Contact Person:* ${contactPerson}\n`;
+    msg += `• *Phone:* ${phone}\n`;
+    if (email) msg += `• *Email:* ${email}\n`;
+    msg += `• *Estimated Students:* ${studentCount}\n`;
+    if (notes) msg += `• *Notes:* ${notes}\n`;
+
+    saveInquiry('wingstarter_inquiry', { orgName, contactPerson, phone, email, studentCount, notes });
+    openWhatsApp(msg);
+    closeModal('wingstarter');
+    f.reset();
+    showToast('Inquiry submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your WingsStarter inquiry has been prepared and opened in WhatsApp.');
+  }
+
+  // 5. Corporate & Leisure Inquiry (corpInquiry)
+  function handleCorpInquiry(e) {
+    e.preventDefault();
+    const f = e.target;
+    const orgName = f.orgName ? f.orgName.value.trim() : '';
+    const contactPerson = f.contactPerson ? f.contactPerson.value.trim() : '';
+    const phone = f.phone ? f.phone.value.trim() : '';
+    const email = f.email ? f.email.value.trim() : '';
+    const headcount = f.headcount ? f.headcount.value : '';
+    const notes = f.notes ? f.notes.value.trim() : '';
+
+    let msg = `*FIRSTS ACADEMY — Corporate & Leisure Inquiry*\n\n`;
+    msg += `• *Company / Organization:* ${orgName}\n`;
+    msg += `• *Contact Person:* ${contactPerson}\n`;
+    msg += `• *Phone:* ${phone}\n`;
+    if (email) msg += `• *Email:* ${email}\n`;
+    msg += `• *Estimated Participants:* ${headcount}\n`;
+    if (notes) msg += `• *Objectives:* ${notes}\n`;
+
+    saveInquiry('corporate_inquiry', { orgName, contactPerson, phone, email, headcount, notes });
+    openWhatsApp(msg);
+    closeModal('corpInquiry');
+    f.reset();
+    showToast('Inquiry submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your corporate inquiry has been prepared and opened in WhatsApp.');
+  }
+
+  // 6. Junior Kings Church Registration (notifyModal)
+  function handleJuniorKingsRegister(e) {
+    e.preventDefault();
+    const f = e.target;
+    const fullName = f.fullName ? f.fullName.value.trim() : '';
+    const phone = f.phone ? f.phone.value.trim() : '';
+    const churchName = f.churchName ? f.churchName.value.trim() : '';
+    const youths = f.youths ? f.youths.value : '';
+
+    let msg = `*FIRSTS ACADEMY — Junior Kings Church Registration*\n\n`;
+    msg += `• *Leader Name:* ${fullName}\n`;
+    msg += `• *Phone / WhatsApp:* ${phone}\n`;
+    msg += `• *Church / Ministry:* ${churchName}\n`;
+    msg += `• *Number of Church Youths:* ${youths}\n`;
+
+    saveInquiry('junior_kings_registration', { fullName, phone, churchName, youths });
+    openWhatsApp(msg);
+    closeModal('notifyModal');
+    f.reset();
+    showToast('Registration submitted! Opening WhatsApp...', false);
+    alert('Thank you! Your Junior Kings registration has been prepared and opened in WhatsApp.');
+  }
+
+  // 7. Contact Page Message (handleContactSubmit)
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const fullName = f.fullName ? f.fullName.value.trim() : '';
+    const email = f.email ? f.email.value.trim() : '';
+    const phone = f.phone ? f.phone.value.trim() : '';
+    const school = f.school ? f.school.value.trim() : '';
+    const message = f.message ? f.message.value.trim() : '';
+
+    let msg = `*FIRSTS ACADEMY — Contact Inquiry*\n\n`;
+    msg += `• *Full Name:* ${fullName}\n`;
+    msg += `• *Phone:* ${phone}\n`;
+    if (email) msg += `• *Email:* ${email}\n`;
+    if (school) msg += `• *Current School:* ${school}\n`;
+    msg += `• *Message:* ${message}\n`;
+
+    saveInquiry('contact_message', { fullName, email, phone, school, message });
+    openWhatsApp(msg);
+    f.reset();
+    showToast('Message sent! Opening WhatsApp chat...', false);
+    alert('Thank you! Your message has been prepared and opened in WhatsApp.');
   }
 
   // Initialize cart on page load
