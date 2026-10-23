@@ -1939,7 +1939,7 @@
   // Navigation
   function nav(page) {
     document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    document.getElementById('page-' + page).classList.add('active');
+    const target = document.getElementById('page-' + page); if (target) target.classList.add('active'); if (window.history && window.history.pushState) window.history.pushState(null, null, '#' + page);
     document.querySelectorAll('#navLinks a').forEach(a => {
       a.classList.remove('text-primary','border-b-2','border-primary','pb-1');
       a.classList.add('text-on-surface');
